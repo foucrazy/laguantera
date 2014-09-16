@@ -1,0 +1,31 @@
+    <%@include file="../init.jspf" %>
+    
+    <tiles:importAttribute name="idDialogo" scope="request"/>
+    <tiles:importAttribute name="tituloDialogo" scope="request"/>
+    <tiles:importAttribute name="mensajeDialogo" scope="request"/>
+    <tiles:importAttribute name="textoInput" scope="request"/>
+    <tiles:importAttribute name="operacionEjecutandoseMensaje" scope="request"/>
+    
+    <div id="${idDialogo}" title="<fmt:message key="${tituloDialogo}"/>">
+        <div class="fieldHorizontalDerecha" id="formDialog">
+            <p>
+                <fmt:message key="${mensajeDialogo}"/>
+            </p>
+            <label for="info">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><fmt:message key="${textoInput}"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="text" id="info" name="info" />
+            <div id="errorDialogo" class="Ocultar Error"></div>
+        </div>
+        <div id="operacionEjecutandose" class="Ocultar">
+            <p>
+                <fmt:message key="${operacionEjecutandoseMensaje}"/>
+            </p>
+            
+            <s:text name="laguantera.jsp.cargando" var="descipcionImagen">
+                <s:param><fmt:message key="${mensajeDialogo}"/></s:param>
+            </s:text>
+            
+            <img src="img/comun/segmentosWeb/cargando.gif" alt="${descipcionImagen}"/>
+        </div>
+    </div>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.OpeEle" table="ope_ele">
+    <composite-id class="com.laguantera.dao.OpeEleId" name="id">
+      <key-property name="idOperacion" type="int">
+        <column name="idOperacion"/>
+      </key-property>
+      <key-property name="idElemento" type="int">
+        <column name="idElemento"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="com.laguantera.dao.Elementos" fetch="select" insert="false" name="elementos" update="false">
+      <column name="idElemento" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.laguantera.dao.Operaciones" fetch="select" insert="false" name="operaciones" update="false">
+      <column name="idOperacion" not-null="true"/>
+    </many-to-one>
+    <property name="precioUnidad" type="java.lang.Float">
+      <column name="precioUnidad" precision="12" scale="0"/>
+    </property>
+    <property name="cantidad" type="java.lang.Integer">
+      <column name="cantidad"/>
+    </property>
+  </class>
+</hibernate-mapping>

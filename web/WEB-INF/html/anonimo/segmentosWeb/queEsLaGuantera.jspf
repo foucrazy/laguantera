@@ -1,0 +1,76 @@
+                <%@include file="../init.jspf" %>
+        
+                <div id="queEsLaGuantera" class="Ocultar">
+                    <h1 class="TituloPagina">
+                        <s:text name="laguantera.jsp.anonimo.menu.queEsLaGuantera.texto"/>
+                    </h1>
+                    <div class="CuerpoPagina">
+                        <p>
+                            <s:text name="laguantera.jsp.anonimo.queEsLaGuantera.intro"/>
+                        </p>
+                        <div class="Caracteristicas">
+                            <div class="Caracteristica4">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/queEsLaGuantera/calculadora.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.planificaTuViaje.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.menu.planificaTuViaje.texto"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.planificaTuViaje.texto"/>
+                                    <br />
+                                    <a href='#planificaTuViaje' title="<s:text name="laguantera.jsp.anonimo.menu.planificaTuViaje.descripcionEnlace"/>">
+                                        <s:text name="laguantera.jsp.verMas"/>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Caracteristica4">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/queEsLaGuantera/galeria.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.galeriaImagenes.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.menu.galeriaImagenes.texto"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.galeriaImagenes.texto"/>
+                                    <br />
+                                    <a href='#galeriaImagenes' title="<s:text name="laguantera.jsp.anonimo.menu.galeriaImagenes.descripcionEnlace"/>">
+                                        <s:text name="laguantera.jsp.verMas"/>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Caracteristica4">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/queEsLaGuantera/gastos.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.gestionGastos.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.menu.gestionGastos.texto"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.gestionGastos.texto"/>
+                                    <br />
+                                    <a href='#gestionGastos' title="<s:text name="laguantera.jsp.anonimo.menu.gestionGastos.descripcionEnlace"/>">
+                                        <s:text name="laguantera.jsp.verMas"/>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Caracteristica4">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/queEsLaGuantera/reparaciones.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.notificaciones.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.menu.notificaciones.texto"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.queEsLaGuantera.caracteristicas.notificaciones.texto"/>
+                                    <br />
+                                    <a href='#notificaciones' title="<s:text name="laguantera.jsp.anonimo.menu.notificaciones.descripcionEnlace"/>">
+                                        <s:text name="laguantera.jsp.verMas"/>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Cleaner"></div>
+                        </div>
+                    </div>
+                    <tiles:insertAttribute name="pie" />
+                </div>

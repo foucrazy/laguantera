@@ -1,0 +1,66 @@
+<%@include file="init.jspf" %>
+
+<form id="editarDatos" action="<s:url action='CuentaUsuarioActualizar'/>" method="POST" class="formulario" acceptcharset="UTF-8">
+    <div class="noticeBlock">
+        <p>
+            <s:text name="laguantera.jsp.campoObligatorio.texto"/>
+        </p>
+    </div>
+    
+    <fieldset>
+        <legend><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.contrasega.datosGenerales.grupo"/></legend>
+        <div class="fieldHorizontalDerecha">
+            <label for="email">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.email.texto"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="text" id="email" name="email" value="${usuario.email}" />
+        </div>
+
+        <div class="fieldHorizontalDerecha">
+            <label for="alias">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.alias"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="text" id="alias" name="alias" value="${usuario.alias}"/>
+        </div>
+
+        <div class="fieldHorizontalDerecha">
+            <label for="codigoPostal">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.codigopostal.texto"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="text" id="codigoPostal" name="codigoPostal" value="${usuario.codigoPostal}"/>
+        </div>
+     </fieldset>
+    
+    <fieldset>
+        <legend><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.contrasega.grupo"/></legend>
+
+        <div class="fieldHorizontalDerecha">
+            <label for="password">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.contrasegna.nueva"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="password" id="password" name="password" />
+        </div>
+
+        <div class="fieldHorizontalDerecha">
+            <label for="rePassword">
+                <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.contrasegna.nueva.confirmar"/><s:text name="laguantera.jsp.dosPuntos"/>
+            </label>
+            <input type="password" id="rePassword" name="rePassword" />
+        </div>
+    </fieldset>
+         
+    <div class="Cleaner"></div>
+    
+    <div class="fieldHorizontalDerecha">
+        <label for="oldPassword">
+            <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.contrasegna.vieja"/><s:text name="laguantera.jsp.dosPuntos"/>
+        </label>
+        <input type="password" id="oldPassword" name="oldPassword" />
+    </div>
+
+    <div class="bottonBlock">
+        <input type="submit" title='<s:text name="laguantera.jsp.boton.actualizar" />' value='<s:text name="laguantera.jsp.boton.actualizar" />' class="LoginBoton Button Small Blue FloatRigth5" />
+        <div class="Cleaner"></div>
+    </div>
+
+</form>

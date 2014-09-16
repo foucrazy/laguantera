@@ -1,0 +1,91 @@
+/**************************************************************************************************
+ * 					Estilos generales					  *
+ **************************************************************************************************/
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    color: white;
+    background-color: #1E5799;
+    background-image: url("/laguantera/img/logueado/css/plantilla/segmentosPlantilla/pie.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height:100%;
+}
+
+
+/**************************************************************************************************
+ *			 			       			Estilos para Cuerpo                              		  *
+ **************************************************************************************************/
+ .EnvolturaCuerpo{
+    padding:10px;
+    margin-top:5px;
+    height: 80%;
+ }
+ 
+ .Menu, .Contenido, .BarraDerecha{
+    background: #151F2B;
+    border:2px solid #202F42;
+    float: left;
+    padding: 5px;
+ }
+ 
+ .Contenido, .BarraDerecha{
+    margin-left: 1%;
+ }
+
+/*Contenido*/
+ .Contenido{
+    width: 70%;
+    height: 90%;
+ }
+
+.MenuSecundario{
+    border-bottom: 1px solid #0059EC;
+    height:5%;
+}
+ 
+ .MenuSecundario ul{
+    list-style-type: none;
+}
+
+.MenuSecundario ul li{
+    display: inline;
+}
+
+.MenuSecundario ul li a {
+    color: #e3e3e3;
+    font-size: 15px;
+    font-family: helvetica, arial, sans-serif;
+    text-decoration: none;
+    padding:8px 15px;
+}
+ 
+ .Seccion{
+    padding-top:1%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:94%;
+ }
+ 
+ /*Lateral Derecho*/
+ .BarraDerecha{
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+    width:16%;
+    height: 90%;
+ }
+ 
+ .BarraDerecha > .divImag{
+    margin: 0 auto;
+ }
+ 
+ .BarraDerecha > .divImag > img{
+    max-width: 100%;
+ }

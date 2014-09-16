@@ -1,0 +1,31 @@
+<%@include file="init.jspf" %>
+
+    <p>
+        <s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.borrar.text"/><br />
+    </p>
+    
+    <form action="<s:url action='BorrarCuentaUsuarioEjecutar'/>" method="POST" cssClass="formulario" theme="simple" acceptcharset="UTF-8" validate="true">
+        <s:hidden name="idUsuario" value="%{#session.idUsuario}"/>
+        
+        <div>
+            <input id="inpuntSi" type="radio" name="confirmacion" value="true" /><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.borrar.si"/>
+        </div>
+        
+        <div>
+            <input id="inpuntNo" type="radio" name="confirmacion" value="false" /><s:text name="laguantera.jsp.logueado.cuentaUsuario.pagina.borrar.no"/>
+        </div>
+
+        <laguantera:captchaTag 
+            captchAud="/laguantera/audio.wav" 
+            captchaImg="/laguantera/stickyImg.png" 
+            divClass="fieldCaptcha"
+            idInput="answer"
+        />
+
+        <div class="bottonBlock">
+            <input type="submit" title='<s:text name="laguantera.jsp.boton.borrar" />' value='<s:text name="laguantera.jsp.boton.borrar" />' class="LoginBoton Button Small Blue FloatRigth5" />
+            <div class="Cleaner"></div>
+        </div>
+
+        <div class="clear"></div>
+    </form>

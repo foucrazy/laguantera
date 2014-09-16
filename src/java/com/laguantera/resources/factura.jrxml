@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura" pageWidth="595" pageHeight="836" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Tue Oct 25 12:05:51 CEST 2011"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#E1B171">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6DCCF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="nombreVehiculo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="origen" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="destino" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ocupantes" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bultos" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="conduccion" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="combustible" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="consumo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="precio" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="distancia" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="costeTotal" class="java.lang.String">
+		<defaultValueExpression><![CDATA["--"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="encodeStringIda" class="java.lang.String"/>
+	<parameter name="encodeStringVuelta" class="java.lang.String"/>
+	<parameter name="urlMapaIda" class="java.lang.String">
+		<defaultValueExpression><![CDATA["http://maps.google.com/maps/api/staticmap?markers=label:A|"+$P{origen}+"&markers=label:B|"+$P{destino}+"&size=400x150&sensor=false&path=color:0x002513|enc:"+$P{encodeStringIda}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="urlMapaVuelta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[($P{encodeStringVuelta}.equals("")) ? "" : "http://maps.google.com/maps/api/staticmap?markers=label:A|"+$P{destino}+"&markers=label:B|"+$P{origen}+"&size=400x150&sensor=false&path=color:0x582513|enc:"+$P{encodeStringVuelta}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<variable name="variable1" class="java.lang.String"/>
+	<background>
+		<band height="836" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="595" height="836"/>
+				<imageExpression><![CDATA["carretera.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="36" width="329" height="27"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CALCULADORA DE COSTES]]></text>
+			</staticText>
+			<image scaleImage="RealSize">
+				<reportElement x="38" y="16" width="147" height="79" isPrintInFirstWholeBand="true"/>
+				<imageExpression><![CDATA["logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<summary>
+		<band height="657">
+			<rectangle radius="25">
+				<reportElement mode="Opaque" x="72" y="42" width="436" height="177" backcolor="#F2A81D"/>
+				<graphicElement>
+					<pen lineWidth="2.25" lineStyle="Solid" lineColor="#A28810"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="79" y="71" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="91" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Ocupantes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="111" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Bultos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="97" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Conduccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="117" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Combustible:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="137" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Vehiculo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="157" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Consumo medio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="51" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Origen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="177" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Coste combustible:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="131" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Distancia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="242" y="200" width="38" height="20" forecolor="#990000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" size="11" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="179" y="51" width="300" height="20" backcolor="#F1B23C"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{origen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="179" y="71" width="300" height="20" backcolor="#F1B23C"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="91" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ocupantes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="111" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bultos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="97" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{conduccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="117" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{combustible}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="157" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{consumo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="177" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="131" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{distancia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="280" y="200" width="100" height="20" forecolor="#990000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{costeTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="137" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreVehiculo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="10" y="8" width="140" height="20"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="241" y="637" width="100" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LaGuantera.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="552" width="500" height="56"/>
+				<textElement/>
+				<text><![CDATA[Toda la información presente en este documento relativa a la ruta o vehiculo a utilizar ha sido facilitada por el usuario.
+Los costes reales pueden variar por diversas causas tales como la velocidad a la que se circule, el estado del tráfico o las condiciones climáticas. Los costes calculados son aproximados.]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement x="94" y="220" width="400" height="150"/>
+				<imageExpression><![CDATA[$P{urlMapaIda}.replaceAll(" ","%20")]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="280" y="91" width="1" height="106" forecolor="#666666"/>
+			</line>
+			<image onErrorType="Blank">
+				<reportElement x="94" y="370" width="400" height="150"/>
+				<imageExpression><![CDATA[$P{urlMapaVuelta}.replaceAll(" ","%20")]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

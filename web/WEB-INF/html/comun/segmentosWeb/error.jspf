@@ -1,0 +1,13 @@
+                <%@include file="../init.jspf" %>
+
+
+                <h1 class="TituloPagina"><s:text name="laguantera.jsp.anonimo.paginaSimple.error.tituloPagina"/></h1>
+                <div class="CuerpoPagina">
+                    <p>
+                        <s:text name="laguantera.jsp.anonimo.paginaSimple.error.mensaje"/> <br />
+                        <s:iterator value="actionErrors" >
+                            <span class="errorMessage"><s:text name="%{mensaje}"/></span>
+                        </s:iterator>
+                    </p>
+                </div>
+                <tiles:insertAttribute name="pie" />

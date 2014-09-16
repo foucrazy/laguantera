@@ -1,0 +1,108 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="administradorLibre" extends="struts-default">
+    </package>
+
+<!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="administrador" extends="usuariosRegistrados">
+        
+        <global-results>
+            <result name="noAutorizado">/WEB-INF/html/admin/noAutorizado.jsp</result>
+            <result name="logIn">/WEB-INF/html/admin/login.jsp</result>
+            <result name="error">/WEB-INF/html/admin/error.jsp</result>
+            <result name="ok">/WEB-INF/html/admin/ok.jsp</result>
+        </global-results>        
+        
+        <action name="LoadPanelAdmin">
+            <result>/WEB-INF/html/admin/index.jsp</result>
+        </action>
+
+        <!--EESS-->
+        <action name="AdminUpdateEESS" class="com.laguantera.action.admin.UpdateEESS"></action>
+
+        <!--SISTEMA-->
+        <action name="AdminGetInfoSistema" class="com.laguantera.action.admin.GetInfoSistema">
+            <result name="ok">/WEB-INF/html/admin/sistema.jsp</result>
+        </action>
+
+        <!--LOG-->
+        <action name="AdminGetLog" class="com.laguantera.action.admin.GetLog">
+            <result name="ok">/WEB-INF/html/admin/log.jsp</result>
+        </action>
+
+        <!--COSTES-->
+        <action name="AdminGetCostes" class="com.laguantera.action.admin.GetCostes">
+            <result name="ok">/WEB-INF/html/admin/listCostes.jsp</result>
+        </action>
+
+        <!--ELEMENTOS-->
+        <action name="AdminGetElementos" class="com.laguantera.action.admin.GetElementos">
+            <result name="ok">/WEB-INF/html/admin/listElementos.jsp</result>
+        </action>
+
+        <!--OPERACIONES-->
+        <action name="AdminGetOperaciones" class="com.laguantera.action.admin.GetOperaciones">
+            <result name="ok">/WEB-INF/html/admin/listOperaciones.jsp</result>
+        </action>
+
+        <!--VEHICULOS-->
+        <action name="AdminGetVehiculos" class="com.laguantera.action.admin.GetVehiculos">
+            <result name="ok">/WEB-INF/html/admin/listVehiculos.jsp</result>
+        </action>
+
+        <action name="AdminGetMarcas" class="com.laguantera.action.admin.GetMarcas">
+            <result name="ok">/WEB-INF/html/admin/listMarcas.jsp</result>
+        </action>
+
+        <action name="AdminGetModelos" class="com.laguantera.action.admin.GetModelos">
+            <result name="ok">/WEB-INF/html/admin/listModelos.jsp</result>
+        </action>
+        
+        <!--Carga de la información del IDAE sobre los vehiculos-->
+        <action name="AdminCargarVehiculosIDAE" class="com.laguantera.action.admin.CargarVehiculosIDAE">            
+        </action>
+
+        <!--Carga de la información contenida en XMLs sobre marcas y modelos-->
+        <action name="AdminCargarMarcasModelosXML" class="com.laguantera.action.admin.CargarMarcasModelos">
+        </action>        
+
+        <!--COMBUSTIBLES-->
+
+        <action name="AdminGetCombustibles" class="com.laguantera.action.admin.GetCombustibles">
+            <result name="ok">/WEB-INF/html/admin/listCombustibles.jsp</result>
+        </action>
+
+        <!--USUARIOS-->
+
+        <action name="AdminGetUsuarios" class="com.laguantera.action.admin.GetUsuarios">
+            <result name="ok">/WEB-INF/html/admin/listUsuarios.jsp</result>
+        </action>
+
+        <!--CONFIGURACION-->
+        <action name="AdminGetConfig" class="com.laguantera.action.admin.GetConfig">
+            <result name="ok">/WEB-INF/html/admin/configuracion.jsp</result>
+        </action>
+
+        <action name="setConfiguracion" class="com.laguantera.action.admin.SetConfiguracion">            
+        </action>
+
+        <action name="reloadConfiguracion" class="com.laguantera.action.admin.ReloadConfiguracion">            
+        </action>
+
+        <action name="restoreConfiguracion" class="com.laguantera.action.admin.RestoreConfiguracion">          
+        </action>
+
+        <action name="removeConfiguracion" class="com.laguantera.action.admin.RemoveConfiguracion">            
+        </action>
+        
+        <!--NEUMATICOS-->
+        <action name="AdminCargarNeumaticosOponeo" class="com.laguantera.action.admin.CargarNeumaticosOponeo2"></action>
+        
+    </package>
+
+</struts>

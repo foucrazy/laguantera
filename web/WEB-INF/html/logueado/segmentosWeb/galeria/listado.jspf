@@ -1,0 +1,17 @@
+<%@include file="init.jspf" %>
+
+<c:choose>
+    <c:when test="${not empty listGalerias}" >
+        <c:forEach items="${listGalerias}" var="galeria" varStatus="contador">
+            <div class="galeriaListado">      
+                <c:url var="vistaGaleria" value="GaleriaVer">
+                    <c:param name="idGaleria" value='${galeria.idGaleria}'/>
+                </c:url>                    
+                <a href="${vistaGaleria}">${galeria.titulo}</a>
+            </div>
+        </c:forEach>
+    </c:when>
+    <c:otherwise>
+        <s:text name="laguantera.jsp.logueado.galeria.empty"/>
+    </c:otherwise>
+</c:choose>

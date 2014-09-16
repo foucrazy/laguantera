@@ -1,0 +1,15 @@
+        <%@include file="../../init.jspf" %>
+        <div id="cabecera" class="Cabecera">
+            <div class="TituloCabecera">
+                <a href="#queEsLaGuantera" title="<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.descipcionEnlace"/>">
+                    <img src="./img/anonimo/html/plantillas/segmentosPlantilla/cabecera/cabecera.png" alt="<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.descipcionImagen"/>" />
+                </a>
+                <div class="Ocultar">
+                    <s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.titulo.articulo"/> 
+                    <span><s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.titulo.nombre"/></span> 
+                    <span class="tagline"><s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.descipcionImagen"/></span>	
+                </div>
+            </div>
+
+            <tiles:insertAttribute name="login" />
+        </div>

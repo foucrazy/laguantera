@@ -1,0 +1,109 @@
+.vehiculo{
+    border: black solid 0.2em;
+    margin-top: 0.3em;
+}
+
+.vehiculo h1{
+    background-color: black;
+    color: white;
+    position: relative;
+    top: -0.7em;
+    width: 10em;
+}
+
+.datosGenerales,.detalles,.avisos{
+    margin: 0.5em;
+}
+
+.datosGenerales div{
+    float: left;
+}
+
+.datosGenerales img{
+    height: 150px;
+    width: 200px;
+}
+
+.datosGenerales ul{
+    list-style: none outside none;
+    margin-left: 0.5em;
+    margin-top: 2em;
+}
+
+datosGenerales ul li{
+
+}
+
+.detalles table{
+    font-family: Tahoma,Verdana,Arial;
+    border-collapse: collapse;
+    border-left: 1px solid #1F2A34;
+    border-right: 1px solid #1F2A34;
+    border-spacing: 1px;
+}
+
+.detalles table caption{
+    background: none repeat scroll 0 0 #1F2A34;
+    border-left: 1px solid #1F2A34;
+    border-right: 1px solid #1F2A34;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.detalles table thead tr th{
+    background: url("../../../imagenes/css/theadth.gif") repeat scroll 0 0 transparent;
+    border-color: black #1F2A34;
+    border-style: solid;
+    border-width: 5px 1px;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 30px;
+    text-align: center;
+    width: 9em;
+}
+.detalles table tbody tr td{
+    background: none repeat scroll 0 0 #2D3134;
+    border: 1px solid #373B3E;
+    color: #FFFFFF;
+    font-size: 10px;
+    height: 40px;
+    padding-left: 3px;
+}
+
+.avisos h2{
+
+}
+
+.avisos dl{
+    margin-left: 1em;
+}
+
+.avisos dl dt{
+
+}
+
+.avisos dl dd{
+    margin-left: 0.5em;
+}
+
+.operacionesVehiculo{
+    
+}
+
+.operacionesVehiculo ul{
+    margin: 0.5em auto;
+    width: 21em;
+    list-style: none;
+}
+
+.operacionesVehiculo li{
+    display: inline;
+    margin-right: 0.2em;
+}
+
+.operacionesVehiculo li a{
+
+}

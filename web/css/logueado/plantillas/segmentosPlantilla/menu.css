@@ -1,0 +1,31 @@
+/*Menu Principal*/
+ .Menu{
+    color:white;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    width: 8%;
+    height: 90%;
+ }
+ 
+ .Seleccionada{
+    background: -moz-linear-gradient(center top , #0B2B61, #1153C0) repeat scroll 0 0 transparent;
+    border-left: 1px solid #0059EC;
+    border-radius: 4px 4px 4px 4px;
+    border-right: 1px solid #0059EC;
+    overflow: hidden;
+ }
+ 
+ .Menu ul{
+ }
+ 
+ .Menu ul li{
+    margin-top: 10px;
+ }
+ 
+ .Menu ul li a{
+    color: #E3E3E3;
+    position: relative;
+    text-decoration: none;
+    z-index:2;
+ }

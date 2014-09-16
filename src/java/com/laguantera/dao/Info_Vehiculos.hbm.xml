@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+  <class catalog="laguantera" name="com.laguantera.dao.Info_Vehiculos" table="info_vehiculos">
+    <id name="idInfoVehiculo" type="java.lang.Integer">
+      <column name="idInfoVehiculo"/>
+      <generator class="identity"/>
+    </id>   
+    
+    <many-to-one class="com.laguantera.dao.Modelos" fetch="select" name="modelos">
+      <column name="idModelo" not-null="true"/>
+    </many-to-one>
+
+    <property name="motor" type="string">
+      <column length="300" name="motor" not-null="true"/>
+    </property>
+    
+    <property name="tara" type="java.lang.Integer">
+      <column name="tara"/>
+    </property>
+    
+    <property name="cilindrada" type="java.lang.Integer">
+      <column name="cilindrada"/>
+    </property>
+    
+    <property name="cv" type="float">
+      <column name="cv" not-null="true" precision="12" scale="0"/>
+    </property>
+    
+    <property name="kw" type="java.lang.Float">
+      <column name="kw" precision="12" scale="0"/>
+    </property>
+    
+    <many-to-one class="com.laguantera.dao.TiposCombustible" fetch="select" name="tiposCombustible">
+      <column name="idTipoCombustible" not-null="true"/>
+    </many-to-one>    
+    
+    <property name="emisiones" type="java.lang.Double">
+      <column name="emisiones" precision="12" scale="0"/>
+    </property>
+    
+    <property name="consCiudad" type="java.lang.Double">
+      <column name="consCiudad" precision="12" scale="0"/>
+    </property>
+    
+    <property name="consMedio" type="java.lang.Double">
+      <column name="consMedio" precision="12" scale="0"/>
+    </property>
+    
+    <property name="consCarretera" type="java.lang.Double">
+      <column name="consCarretera" precision="12" scale="0"/>
+    </property>
+    
+  </class>
+</hibernate-mapping>

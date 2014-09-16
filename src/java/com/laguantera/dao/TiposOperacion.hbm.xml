@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.TiposOperacion" table="tipos_operacion">
+    <id name="idTipoOperacion" type="java.lang.Integer">
+      <column name="idTipoOperacion"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="40" name="nombre"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="100" name="descripcion"/>
+    </property>
+    <set inverse="true" name="operacioneses">
+      <key>
+        <column name="idTipoOperacion" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Operaciones"/>
+    </set>
+  </class>
+</hibernate-mapping>

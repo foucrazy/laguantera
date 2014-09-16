@@ -1,0 +1,80 @@
+                <%@include file="../init.jspf" %>
+                
+                <div id="gestionGastos" class="Ocultar">
+                    
+                    <h1 class="TituloPagina"><s:text name="laguantera.jsp.anonimo.menu.gestionGastos.texto"/></h1>
+                    
+                    <div class="CuerpoPagina">
+                        
+                        <p>
+                            <s:text name="laguantera.jsp.anonimo.gestionGastos.intro"/>
+                        </p>
+                        
+                        <div class="Caracteristicas">
+                            <div class="Caracteristica3">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/gestionGastos/facturasOnline.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.facturasOnline.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.facturasOnline.titulo"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.facturasOnline.texto"/>
+                                    <br />
+                                    <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                       title="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.facturasOnline.video.titulo"/>"
+                                    >
+                                        <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                             alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.facturasOnline.video.descripcion"/>"
+                                        />
+                                    </a>
+                                </p>
+                            </div>
+                                        
+                            <div class="Caracteristica3">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/gestionGastos/estadisticas.png" 
+                                        alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.estadisticas.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.estadisticas.titulo"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.estadisticas.texto"/>
+                                    <br />
+                                    <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                       title="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.estadisticas.video.titulo"/>"
+                                    >
+                                        <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                             alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.estadisticas.video.descripcion"/>"
+                                        />
+                                    </a>
+                                </p>
+                            </div>
+                                        
+                            <div class="Caracteristica3">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/gestionGastos/agrupacionGastos.png"
+                                        alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.agrupacionGastos.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.agrupacionGastos.titulo"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.agrupacionGastos.texto"/>
+                                    <br />
+                                    <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                       title="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.agrupacionGastos.video.titulo"/>"
+                                    >
+                                        <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                             alt="<s:text name="laguantera.jsp.anonimo.gestionGastos.caracteristicas.agrupacionGastos.video.descripcion"/>"
+                                        />
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Cleaner"></div>
+                        </div>
+                        <div class="Cleaner"></div>
+                    </div>
+                        
+                    <tiles:insertAttribute name="pie" />
+                    
+                </div>

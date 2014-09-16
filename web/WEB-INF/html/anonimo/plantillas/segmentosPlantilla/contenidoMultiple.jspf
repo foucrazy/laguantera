@@ -1,0 +1,8 @@
+            <%@include file="../../init.jspf" %>
+
+            <div id="contenido" class="CuerpoMultiple">
+                <tiles:useAttribute id="listaContenidos" name="listaContenidos" classname="java.util.List" />
+                    <c:forEach var="contenido" items="${listaContenidos}">
+                        <tiles:insertAttribute value="${contenido}" />
+                </c:forEach>
+            </div>

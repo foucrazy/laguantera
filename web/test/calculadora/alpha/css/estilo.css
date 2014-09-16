@@ -1,0 +1,214 @@
+
+body{	
+	background:#666D75 url(carretera2.png) no-repeat left top;	
+}
+
+#cabecera{
+	height:175px;
+	width:1000px;	
+	margin:0 auto;	
+}
+
+#contenido{	
+	width:1000px;
+	margin:0 auto;
+	margin-bottom:70px;
+	font-family: Georgia;
+	letter-spacing: 1px;  	
+}
+
+#info{
+	background:#F2A81D;
+	height:30px;
+	margin:0 auto;		
+	width:300px;
+	padding:7px;
+	font-size:11px;
+}
+
+#buscador{
+	background:#F2A81D;
+	height:300px;
+	margin:0 auto;	
+	margin-bottom:20px;
+	border:4px solid #A2880D;
+	border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+}
+
+#formulario{	
+	text-align:center;
+	padding:20px 40px 0px 40px; 		
+}
+
+#formulario #columna1{
+	float:left;
+	width:49%;		
+}
+
+#formulario #columna1 #fila1{
+	background: url("paso1.png") no-repeat bottom right transparent;
+	border:2px dotted #A2880D;
+	width:80%;
+	padding:10px;
+	padding-bottom:25px;
+	margin-bottom:5px;
+}
+
+#formulario #columna1 #fila2{
+	background: url("paso2.png") no-repeat bottom right transparent;
+	border:2px dotted #A2880D;
+	width:80%;
+	padding:10px;
+	padding-bottom:25px;
+}
+
+#formulario #columna2{
+	float:right;
+	width:49%;		
+}
+
+#formulario #columna2 #fila1{
+	float:right;
+	background: url("paso3.png") no-repeat bottom right transparent;
+	border:2px dotted #A2880D;
+	width:80%;
+	padding:10px;
+	padding-bottom:25px;
+	margin-bottom:20px;
+}
+
+#formulario #columna2 #fila1 #avanzado{
+	display:none;	
+}
+
+#formulario #columna2 #fila2{
+	float:right;
+}
+
+#formulario input{
+    background: url("input-text.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #666666;
+    font-family: Georgia;    
+    font-style: italic;
+    height: 18px;
+    letter-spacing: 1px;    
+    padding-left:5px;
+    text-transform: lowercase;
+    width: 180px;
+}
+
+#formulario select{
+	border: 0 none;
+	background-color:#EFEFEF;
+	border-top:1px solid #BBB;
+	border-left:1px solid #BBB;
+}
+
+#formulario .submit{
+    background: url("tecla.png") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #333333;
+    cursor: pointer;
+    float: right;
+    font-family: Georgia;
+    font-size: 1em;
+    height: 31px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    text-transform: uppercase;
+    width: 102px;
+}
+
+#mapa{	
+	background:#019ee7;
+	border:4px solid #22789f;
+	height:300px;
+	width:900px;
+	margin:0 auto;	
+	border-radius: 7px;
+	-ms-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;	
+}
+
+#instrucciones{	
+	float:left;
+	border-bottom:4px solid #22789f;
+	border-left:4px solid #22789f;
+	border-right:4px solid #22789f;
+	background:#a5bfdd;	
+	width:440px;	
+	margin-left:60px;
+	display:none;
+}
+
+#informe{
+	float:left;	
+	width:430px;	
+	display:none;
+}
+
+#informe #datos{
+    width:350px;
+    margin:15px;
+    padding:150px 30px 30px 30px;
+    background: url(papel.png) no-repeat top left transparent;
+    font-family: 'Courier New',Courier,monospace;
+    font-size: 12px;
+}
+
+#informe #datos #fecha{
+    font-size: 18px;
+    border-bottom: 1px solid black;
+}
+
+#informe #datos #resultado{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#informe #opciones{
+	background:#62BF06;	
+	height:75px;
+	padding:10px;
+	width:200px;
+	margin-left:25px;
+	border-bottom:4px solid green;
+	text-align:center;
+	border-radius: 7px;
+	-ms-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;		
+}
+
+#informe #opciones ul{
+	list-style:none outside none;
+}
+
+#informe #opciones li{
+	float:left;
+	margin-right:10px;
+}
+
+#mensajeConsumo{
+	display:none;
+}
+
+.ayudaIcon{
+	float:right;
+	background: url("ayudaIcon.png") no-repeat 3px;	
+	cursor: help;
+	width:23px;
+	height:20px;
+}

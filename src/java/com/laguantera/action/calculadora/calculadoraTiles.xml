@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <!--Paginas especificas Inicio-->
+        <definition name="laguantera.logueado.planificaTuViaje"  extends="laguantera.logueado.plantillaBase">
+
+            <put-attribute name="barraDerechaURLImagen"  value="./img/logueado/html/segmentosWeb/planificaTuViaje/planificaTuViaje.png" />
+            <put-attribute name="barraDerechaURLDescripcion"  value="laguantera.jsp.logueado.planificaTuViaje.barralateral.img.descripcion" />
+            <put-attribute name="barralaterlaDescripcion"  value="laguantera.jsp.logueado.planificaTuViaje.barralateral.descripcion" />
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="Inicio" value="laguantera.jsp.logueado.comun.menu.inicio.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.inicio.descripcion"
+                />
+                <item link="Vehiculos" value="laguantera.jsp.logueado.comun.menu.vehiculos.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.vehiculos.descripcion"
+                />
+                <item link="Operaciones" value="laguantera.jsp.logueado.comun.menu.operaciones.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.operaciones.descripcion"
+                />
+                <item link="Galerias" value="laguantera.jsp.logueado.comun.menu.galerias.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.galerias.descripcion"
+                />
+                <item link="PlanificaTuViaje" value="laguantera.jsp.logueado.comun.menu.planificaTuViaje.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.planificaTuViaje.descripcion"
+                      icon="seleccionada"
+                />
+                <item link="CuentaUsuario" value="laguantera.jsp.logueado.comun.menu.cuentaUsuario.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.cuentaUsuario.descripcion"                      
+                />
+            </put-list-attribute>
+            
+            <put-list-attribute name="menuSecundarioList" cascade="true">
+                <item link="PlanificaTuViajeVer" value="laguantera.jsp.logueado.planificaTuViaje.menuSecundario.ver.titulo" 
+                      tooltip="laguantera.jsp.logueado.planificaTuViaje.menuSecundario.ver.descripcion"
+                />
+                <item link="PlanificaTuViajeAyuda" value="laguantera.jsp.logueado.planificaTuViaje.menuSecundario.ayuda.titulo" 
+                      tooltip="laguantera.jsp.logueado.planificaTuViaje.menuSecundario.ayuda.descripcion"
+                />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.planificaTuViaje.ver" extends="laguantera.logueado.planificaTuViaje">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.planificaTuViaje.pagina.ver.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.planificaTuViaje.pagina.ver.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/planificaTuViaje/ver.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/planificaTuViaje/ver.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.planificaTuViaje.ayuda" extends="laguantera.logueado.planificaTuViaje">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.planificaTuViaje.pagina.ayuda.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.planificaTuViaje.pagina.ayuda.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/planificaTuViaje/ayuda.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/planificaTuViaje/ayuda.css" />
+            </put-list-attribute>
+        </definition>        
+
+</tiles-definitions>

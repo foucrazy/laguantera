@@ -1,0 +1,7 @@
+                <%@include file="init.jspf" %>
+
+                <ul>
+                    <li><s:text name="laguantera.jsp.alias"/>: ${usuario.alias}</li>
+                    <li><s:text name="laguantera.jsp.codigopostal.texto"/>: ${usuario.codigoPostal}</li>
+                    <li><s:text name="laguantera.jsp.email.texto"/>: ${usuario.email}</li>
+                </ul>

@@ -1,0 +1,52 @@
+#formularioRegistros{
+    width:400px;
+}
+
+.fieldCaptcha, .fieldCaptcha #captcha, .fieldCaptcha #auxDiv{ 
+    border:4px solid white;
+    border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+}
+
+.fieldCaptcha{
+    border:4px solid white;
+    background-color: #F2A81D; 
+}
+
+.fieldCaptcha{
+    float: right;
+    margin: 5px;
+}
+
+
+.fieldCaptcha #captcha, .fieldCaptcha #auxDiv{
+    float: left;
+    margin:5px;
+}
+
+.fieldCaptcha #captcha *{
+    margin: 3px 5px;
+}
+
+.fieldCaptcha #captcha input{
+    margin-bottom: 2px;
+    width: 200px;
+}
+
+.fieldCaptcha #captcha audio{
+    margin-bottom: 10px;
+    width: 205px;
+}
+
+.fieldCaptcha #auxDiv{
+    margin: 5px 0 0 0;
+}
+
+.fieldCaptcha #auxDiv img{
+    height:40px;
+    margin:1px;
+    width:40px;
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <!--Paginas de gestión de vehiculos-->
+        <definition name="laguantera.logueado.vehiculo"  extends="laguantera.logueado.plantillaBase">
+
+            <put-attribute name="barraDerechaURLImagen"  value="./img/logueado/html/segmentosWeb/vehiculo/vehiculo.png" />
+            <put-attribute name="barraDerechaURLDescripcion"  value="laguantera.jsp.logueado.vehiculo.barralateral.img.descripcion" />
+            <put-attribute name="barralaterlaDescripcion"  value="laguantera.jsp.logueado.vehiculo.barralateral.descripcion" />
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="Inicio" value="laguantera.jsp.logueado.comun.menu.inicio.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.inicio.descripcion"
+                />
+                <item link="Vehiculos" value="laguantera.jsp.logueado.comun.menu.vehiculos.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.vehiculos.descripcion"
+                      icon="seleccionada"
+                />
+                <item link="Operaciones" value="laguantera.jsp.logueado.comun.menu.operaciones.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.operaciones.descripcion"
+                />
+                <item link="Galerias" value="laguantera.jsp.logueado.comun.menu.galerias.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.galerias.descripcion"                      
+                />
+                <item link="PlanificaTuViaje" value="laguantera.jsp.logueado.comun.menu.planificaTuViaje.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.planificaTuViaje.descripcion"
+                />
+                <item link="CuentaUsuario" value="laguantera.jsp.logueado.comun.menu.cuentaUsuario.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.cuentaUsuario.descripcion"
+                />
+            </put-list-attribute>
+            
+            <put-list-attribute name="menuSecundarioList" cascade="true">
+                <item link="VehiculoListado" value="laguantera.jsp.logueado.vehiculo.menuSecundario.listado.titulo" 
+                      tooltip="laguantera.jsp.logueado.vehiculo.menuSecundario.listado.descripcion"
+                />
+                <item link="VehiculoAnadir" value="laguantera.jsp.logueado.vehiculo.menuSecundario.anadir.titulo" 
+                      tooltip="laguantera.jsp.logueado.vehiculo.menuSecundario.anadir.descripcion"
+                />
+            </put-list-attribute>                   
+        </definition>
+        
+        <definition name="laguantera.logueado.vehiculo.listado"  extends="laguantera.logueado.vehiculo">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.vehiculo.pagina.listado.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.vehiculo.pagina.listado.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/vehiculo/listado.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/vehiculo/listado.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.vehiculo.ver"  extends="laguantera.logueado.vehiculo">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.vehiculo.pagina.ver.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.vehiculo.pagina.ver.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/vehiculo/ver.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/vehiculo/ver.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.vehiculo.editar"  extends="laguantera.logueado.vehiculo">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.vehiculo.pagina.editar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.vehiculo.pagina.editar.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/vehiculo/editar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/vehiculo/editar.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.vehiculo.anadir"  extends="laguantera.logueado.vehiculo">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.vehiculo.pagina.anadir.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.vehiculo.pagina.anadir.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/vehiculo/nuevo.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/vehiculo/anadir.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.vehiculo.borrar"  extends="laguantera.logueado.vehiculo">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.vehiculo.pagina.borrar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.vehiculo.pagina.borrar.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/vehiculo/borrar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/vehiculo/borrar.css" />
+            </put-list-attribute>
+        </definition>
+        
+<!--
+        <definition name="laguantera.usuario.gestionVehiculos.listadoVehiculos" extends="laguantera.usuario.plantillaModalFormAbstracta">
+          <put-attribute name="title" value="Gestión Vehiculos - Listado" />
+          <put-attribute name="keywords" value="clave,palabra" />
+          <put-attribute name="Description" value="Gestión Vehiculos - Listado" />
+          <put-attribute name="css" value="css/usuario/vehiculos/listadoVehiculos.css" />
+          <put-attribute name="wrapContentBody" value="/WEB-INF/html/jsp/segmentosWeb/vehiculos/listar.jsp" />
+        </definition>
+
+        <definition name="laguantera.usuario.gestionVehiculos.VistaAgnadirVehiculo" extends="laguantera.usuario.plantillaModalFormAbstracta">
+          <put-attribute name="title" value="Gestión Vehiculos - Añadir Vehiculo" />
+          <put-attribute name="keywords" value="clave,palabra" />
+          <put-attribute name="Description" value="Gestión Vehiculos - Añadir Vehiculo" />
+          <put-attribute name="css" value="css/anonimo/anonimoRegistro.css" />
+          <put-attribute name="wrapContentBody" value="/WEB-INF/html/jsp/segmentosWeb/vehiculos/nuevo.jsp" />
+        </definition>
+
+        <definition name="laguantera.usuario.gestionVehiculos.VistaVehiculo" extends="laguantera.usuario.plantillaModalFormAbstracta">
+          <put-attribute name="title" value="Gestión Vehiculos - Datos Vehiculo" />
+          <put-attribute name="keywords" value="clave,palabra" />
+          <put-attribute name="Description" value="Gestión Vehiculos - Datos Vehiculo" />
+          <put-attribute name="css" value="css/usuario/vehiculos/vistaVehiculos.css" />
+          <put-attribute name="wrapContentBody" value="/WEB-INF/html/jsp/segmentosWeb/vehiculos/vista.jsp" />
+        </definition>
+
+        <definition name="laguantera.usuario.gestionVehiculos.borrarVehiculo" extends="laguantera.usuario.plantillaAbstracta">
+          <put-attribute name="title" value="Gestión Vehiculos - Borrar Vehiculo" />
+          <put-attribute name="keywords" value="clave,palabra" />
+          <put-attribute name="Description" value="Gestión Vehiculos - Borrar Vehiculo" />
+          <put-attribute name="css" value="css/usuario/vehiculos/borrar.css" />
+          <put-attribute name="wrapContentBody" value="/WEB-INF/html/jsp/segmentosWeb/vehiculos/borrar.jsp" />
+        </definition>
+
+        <definition name="laguantera.usuario.gestionVehiculos.VistaEditarVehiculo" extends="laguantera.usuario.plantillaModalFormAbstracta">
+          <put-attribute name="title" value="Gestión Vehiculos - Editar Vehiculo" />
+          <put-attribute name="keywords" value="clave,palabra" />
+          <put-attribute name="Description" value="Gestión Vehiculos - Editar Vehiculo" />
+          <put-attribute name="css" value="css/anonimo/anonimoRegistro.css" />
+          <put-attribute name="wrapContentBody" value="/WEB-INF/html/jsp/segmentosWeb/vehiculos/editar.jsp" />
+        </definition>
+-->
+</tiles-definitions>

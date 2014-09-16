@@ -1,0 +1,12 @@
+.cabeceraNuevaGaleria{
+    margin: 2%;
+    width: 100%;
+    background-color: #494949;
+    padding:0.5%;
+}
+
+.formularioNuevaGaleria{
+    border: 1px dotted gray;
+    padding: 1%;
+    margin:1%;
+}

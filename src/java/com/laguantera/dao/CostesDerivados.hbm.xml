@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.CostesDerivados" table="costes_derivados">
+    <composite-id class="com.laguantera.dao.CostesDerivadosId" name="id">
+      <key-property name="idTipoCoste" type="int">
+        <column name="idTipoCoste"/>
+      </key-property>
+      <key-property name="idVehiculo" type="int">
+        <column name="idVehiculo"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="com.laguantera.dao.TiposCoste" fetch="select" insert="false" name="tiposCoste" update="false">
+      <column name="idTipoCoste" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.laguantera.dao.Vehiculos" fetch="select" insert="false" name="vehiculos" update="false">
+      <column name="idVehiculo" not-null="true"/>
+    </many-to-one>
+    <property name="valor" type="java.lang.Float">
+      <column name="valor" precision="12" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+                <%@include file="init.jspf" %>
+
+                <div id="<tiles:insertAttribute name="id" />" class="Ocultar">
+                    <tiles:insertAttribute name="segmentoComun" />
+                    
+                    <tiles:insertAttribute name="pie" />
+                </div>

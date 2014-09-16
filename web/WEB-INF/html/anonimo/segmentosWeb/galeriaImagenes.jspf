@@ -1,0 +1,73 @@
+            <%@include file="../init.jspf" %>
+
+            <div id="galeriaImagenes" class="Ocultar">
+
+                <h1 class="TituloPagina"><s:text name="laguantera.jsp.anonimo.menu.galeriaImagenes.texto"/></h1>
+
+                <div class="CuerpoPagina">
+                    <p>
+                        <s:text name="laguantera.jsp.anonimo.galeriaImagenes.intro"/>
+                    </p>
+                    <div class="Caracteristicas">
+                        <div class="Caracteristica3">
+                            <h3>
+                                <img class="Centrar" src="./img/anonimo/html/segmentosWeb/galeriaImagenes/albumes.png" 
+                                    alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.albumes.imagen.descripcion"/>" 
+                                />
+                                <span><s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.albumes.titulo"/></span>
+                            </h3>
+                            <p>
+                                <s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.albumes.texto"/>
+                                <br />
+                                <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                    title="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.albumes.video.titulo"/>"
+                                >
+                                    <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                            alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.albumes.video.descripcion"/>"
+                                    />
+                                </a>
+                            </p>
+                        </div>
+                        <div class="Caracteristica3">
+                            <h3>
+                                <img src="./img/anonimo/html/segmentosWeb/galeriaImagenes/edicionImagenes.png" 
+                                    alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.edicionImagenes.imagen.descripcion"/>" 
+                                />
+                                <span><s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.edicionImagenes.titulo"/></span>
+                            </h3>
+                            <p>
+                                <s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.edicionImagenes.texto"/>
+                                <br />
+                                <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                    title="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.edicionImagenes.video.titulo"/>"
+                                >
+                                    <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                            alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.edicionImagenes.video.descripcion"/>"
+                                    />
+                                </a>
+                            </p>
+                        </div>
+                        <div class="Caracteristica3">
+                            <h3>
+                                <img src="./img/anonimo/html/segmentosWeb/galeriaImagenes/redesSociales.png"
+                                    alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.redesSociales.imagen.descripcion"/>" 
+                                />
+                                <span><s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.redesSociales.titulo"/></span>
+                            </h3>
+                            <p>
+                                <s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.redesSociales.texto"/>
+                                <br />
+                                <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                    title="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.redesSociales.video.titulo"/>"
+                                >
+                                    <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                            alt="<s:text name="laguantera.jsp.anonimo.galeriaImagenes.caracteristicas.redesSociales.video.descripcion"/>"
+                                    />
+                                </a>
+                            </p>
+                        </div>
+                        <div class="Cleaner"></div>
+                    </div>
+                </div>
+                <tiles:insertAttribute name="pie" />
+            </div>

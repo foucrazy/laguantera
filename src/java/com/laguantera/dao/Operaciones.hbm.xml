@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.Operaciones" table="operaciones">
+    <id name="idOperacion" type="java.lang.Integer">
+      <column name="idOperacion"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.laguantera.dao.TiposOperacion" fetch="select" name="tiposOperacion">
+      <column name="idTipoOperacion" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.laguantera.dao.Vehiculos" fetch="select" name="vehiculos">
+      <column name="idVehiculo" not-null="true"/>
+    </many-to-one>
+    <property name="fecha" type="date">
+      <column length="10" name="fecha"/>
+    </property>
+    <property name="importeTotal" type="java.lang.Float">
+      <column name="importeTotal" precision="12" scale="0"/>
+    </property>
+    <property name="kmVehiculo" type="java.lang.Integer">
+      <column name="kmVehiculo"/>
+    </property>
+    <property name="responsable" type="string">
+      <column length="100" name="responsable"/>
+    </property>
+    <property name="lugar" type="string">
+      <column length="200" name="lugar"/>
+    </property>
+    <set inverse="true" name="opeEles">
+      <key>
+        <column name="idOperacion" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.OpeEle"/>
+    </set>
+  </class>
+</hibernate-mapping>

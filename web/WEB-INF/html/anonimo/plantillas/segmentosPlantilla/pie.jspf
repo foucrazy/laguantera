@@ -1,0 +1,17 @@
+        <%@include file="../../init.jspf" %>
+
+        <div class="Pie">
+            <ul>
+                <tiles:useAttribute id="pieList" name="pieList" classname="java.util.List" />
+                <c:forEach var="pieElement" items="${pieList}" varStatus="status">
+                    <li>
+                        <a href="${pieElement.link}" title="<fmt:message key='${pieElement.tooltip}'/>">
+                             <fmt:message key='${pieElement.value}'/>
+                        </a>
+                    </li>
+                    <c:if test="${not status.last}">
+                        <li>|</li>
+                    </c:if>
+                </c:forEach>
+            </ul>
+        </div>

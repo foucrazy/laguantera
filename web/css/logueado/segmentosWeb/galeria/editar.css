@@ -1,0 +1,22 @@
+.cabeceraEditarGaleria{
+    margin: 2%;
+    width: 100%;
+    background-color: #494949;
+    padding:0.5%;
+}
+
+.formularioEditarGaleria{
+    border: 1px dotted gray;
+    padding: 1%;
+    margin:1%;
+}
+
+.formularioEditarGaleria p{
+    margin:1%;
+}
+
+.resaltar{
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: yellow;
+}

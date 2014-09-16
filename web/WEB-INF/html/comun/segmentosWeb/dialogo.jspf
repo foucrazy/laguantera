@@ -1,0 +1,20 @@
+    <%@include file="../init.jspf" %>
+    
+    <tiles:importAttribute name="idDialogo" scope="request"/>
+    <tiles:importAttribute name="tituloDialogo" scope="request"/>
+    <tiles:importAttribute name="contenidoDialogo" scope="request"/>
+    <tiles:importAttribute name="ejecutandoActiva" scope="request"/>
+    
+    <div id="${idDialogo}" title="<fmt:message key="${tituloDialogo}"/>">
+            <p>
+                <fmt:message key="${contenidoDialogo}"/>
+            </p>
+            
+            <s:text name="laguantera.jsp.cargando" var="descipcionImagen">
+                <s:param><fmt:message key="${contenidoDialogo}"/></s:param>
+            </s:text>
+            
+            <c:if test="${ejecutandoActiva}">
+                <img src="img/comun/segmentosWeb/cargando.gif" alt="${descipcionImagen}"/>
+            </c:if>
+    </div>

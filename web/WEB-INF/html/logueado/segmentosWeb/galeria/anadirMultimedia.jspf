@@ -1,0 +1,28 @@
+<%@include file="init.jspf" %>
+
+<div class="cabeceraNuevoMultimedia">
+    <s:text name="laguantera.jsp.logueado.multimedia.pagina.anadir.explicacion" />
+</div>
+
+<div class="formularioNuevoMultimedia">
+    <s:form acceptcharset="UTF-8" action="addMultimedia" method="POST" enctype="multipart/form-data">    
+        <s:hidden name="idGaleria" id="idGaleria" value="%{idGaleria}"/>
+        <s:textfield label="%{getText('laguantera.jsp.logueado.multimedia.anadir.titulo')}" name="titulo" id="titulo" value=""/>
+        <s:textfield label="%{getText('laguantera.jsp.logueado.multimedia.anadir.descripcion')}" name="descripcion" id="descripcion"  value=""/>
+
+       <s:select label="%{getText('laguantera.jsp.logueado.multimedia.anadir.tipo')}" id="idTipoMultimedia"
+                  headerKey="-1" headerValue="%{getText('laguantera.jsp.logueado.multimedia.anadir.tipo')}"
+                  list="listTiposMultimedia"
+                  listKey="idTipoMultimedia"
+                  listValue="nombre"
+                  cssClass="textInput"              
+                  name="idTipoMultimedia"
+                  required="true"
+        /> 
+
+        <s:textfield label="%{getText('laguantera.jsp.logueado.multimedia.anadir.direccion')}" name="ruta" id="ruta"/>    
+
+        <s:file label="%{getText('laguantera.jsp.logueado.multimedia.anadir.imagen')}" name="imagen" id="imagen"/>
+        <s:submit type="button" label="%{getText('laguantera.jsp.logueado.multimedia.anadir.subir')}"/>
+    </s:form>
+</div>

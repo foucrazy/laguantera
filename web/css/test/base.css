@@ -1,0 +1,48 @@
+body{
+    width:1000px;
+    margin: 0 auto;    
+    border:2px solid black;
+}
+
+/*SUPERIOR*/
+#superior{
+    background-color: gray;
+    border:2px solid black;
+    margin:10px;
+}
+
+
+/*CENTRO*/
+#centro{
+    background-color: gray;
+    border:2px solid black;
+    margin:10px;
+    min-height: 500px;
+}
+
+/*INFERIOR*/
+#inferior{
+    background-color: gray;
+    border:2px solid black;
+    margin:10px;
+}
+
+#menuInferior ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menuInferior li {
+    display:inline-block;
+}
+
+#menuInferior a {
+    display: block;        
+    padding:5px;
+    text-decoration: none;   
+}
+
+#menuInferior a:hover {
+    text-decoration: underline;
+}

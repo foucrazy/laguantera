@@ -1,0 +1,60 @@
+<%@include file="init.jspf" %>
+
+<div class="content">
+    <c:choose>
+        <c:when test="${not empty listVehiculos}" >
+            <c:forEach items="${listVehiculos}" var="vehiculoResumen" varStatus="contador">
+                <div class="vehiculo">
+                    <img src="img/comun/segmentosWeb/vehiculo/logosMarcas/${vehiculoResumen.marcaNormalizada}.gif" alt="<s:text name="laguantera.jsp.logueado.vehiculo.common.imagenDescpcion"/>"/>
+ 
+                    <div class="datosGenerales">
+                        <div>
+                            <ul>
+                                <li><s:text name="laguantera.jsp.logueado.vehiculo.common.matricula"/>: ${vehiculoResumen.matricula}</li> 
+                                <li><s:text name="laguantera.jsp.logueado.vehiculo.common.marca"/>: ${vehiculoResumen.marca}</li>
+                                <li><s:text name="laguantera.jsp.logueado.vehiculo.common.modelo"/>:  ${vehiculoResumen.modelo}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearFloat"></div>
+                    <div class="avisos">
+                        <h2><s:text name="laguantera.jsp.logueado.vehiculo.listadoVehiculos.avisos.titulo"/></h2>
+                        <dl>
+                            <dt>Aviso1:</dt>
+                            <dd>Descripcion del aviso</dd>
+                            <dt>Aviso2:</dt>
+                            <dd>Descripcion del aviso</dd>
+                        </dl>
+                    </div>
+                    <div class="operacionesVehiculo">
+                        <ul>
+                            <li>
+                                <c:url var="vistaDatosVehiculo" value="VehiculoVer">
+                                    <c:param name="idVehiculo" value='${vehiculoResumen.idVehiculo}'/>
+                                </c:url>
+                                <a href="${vistaDatosVehiculo}" title="<s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.ver.descripcion"/>">
+                                    <s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.ver.titulo"/>
+                                </a>
+                            </li>
+
+                            <li>
+                                <c:url var="editarDatosVehiculo" value="VehiculoEditar">
+                                    <c:param name="idVehiculo" value='${vehiculoResumen.idVehiculo}'/>
+                                </c:url>
+                                <a href="${editarDatosVehiculo}" title="<s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.editar.descripcion"/>">
+                                    <s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.editar.titulo"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                                         
+                </div>
+                <hr>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <p class="sinElementos">
+                <s:text name="laguantera.jsp.logueado.vehiculo.listadoVehiculos.sinElemento" />
+            </p>
+        </c:otherwise>
+    </c:choose>
+</div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichero>
+<marca>
+<AW>AC Shelby</AW>
+<modelo>
+<AX>Cobra</AX>
+<AA>
+<AZ>
+<Motorizacion>4.6 V8 320cv / 239kw</Motorizacion>
+<kw>238.624</kw>
+<combustible>G</combustible>
+<cv>320</cv>
+<cilindrada>4606</cilindrada>
+<pesoVacio>1050</pesoVacio>
+<Par>440</Par>
+<marchas>5</marchas>
+<cambio>M</cambio>
+<segunda>18.7689191259293</segunda>
+<tercera>28.0806309403438</tercera>
+<cuarta>36.2240139130435</cuarta>
+<quinta>53.2706086956522</quinta>
+<sexta></sexta>
+<septima></septima>
+<octava></octava>
+<Puertas>2</Puertas>
+<Cilindros>8</Cilindros>
+<vMAX>230</vMAX>
+<aceleracion>5</aceleracion>
+<Cons1></Cons1>
+<Cons2>15</Cons2>
+<Cons3></Cons3>
+<EmisionesCo2>348</EmisionesCo2>
+<anioComienzo>2008</anioComienzo>
+<anioFin>2010</anioFin>
+</AZ>
+</AA></modelo>
+</marca>
+</fichero>

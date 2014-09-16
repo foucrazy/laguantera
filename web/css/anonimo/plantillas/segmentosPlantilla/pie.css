@@ -1,0 +1,25 @@
+/*Estilos para el pie de pagina*/
+.Pie{
+	-webkit-border-bottom-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.Pie ul{
+	list-style-type: none;
+	margin: 0 auto;
+	width:450px;
+}
+
+.Pie ul li{
+	display: inline;
+}
+
+.Pie ul li a{
+	text-decoration: none;
+	color: white;
+}
+

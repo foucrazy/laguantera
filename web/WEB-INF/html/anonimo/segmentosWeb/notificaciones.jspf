@@ -1,0 +1,54 @@
+                <%@include file="../init.jspf" %>
+                
+                <div id="notificaciones" class="Ocultar">
+                    
+                    <h1 class="TituloPagina"><s:text name="laguantera.jsp.anonimo.menu.notificaciones.texto"/></h1>
+                    
+                    <div class="CuerpoPagina">
+                        <p>
+                            <s:text name="laguantera.jsp.anonimo.notificaciones.intro"/>
+                        </p>
+                        <div class="Caracteristicas">
+                            <div class="Caracteristica2">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/notificaciones/alertas.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.alertas.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.alertas.titulo"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.alertas.texto"/>
+                                    <br />
+                                    <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                        title="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.alertas.video.titulo"/>"
+                                    >
+                                        <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                                alt="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.alertas.video.descripcion"/>"
+                                        />
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Caracteristica2">
+                                <h3>
+                                    <img src="./img/anonimo/html/segmentosWeb/notificaciones/ofertas.png" 
+                                         alt="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.ofertas.imagen.descripcion"/>" 
+                                    />
+                                    <span><s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.ofertas.titulo"/></span>
+                                </h3>
+                                <p>
+                                    <s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.ofertas.texto"/>
+                                    <br />
+                                    <a class="VideoClass" href="http://www.youtube.com/watch?v=wWr-n7wZCd0" 
+                                        title="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.ofertas.video.titulo"/>"
+                                    >
+                                        <img src="./img/comun/segmentosWeb/youtubePlay.jpg" 
+                                                alt="<s:text name="laguantera.jsp.anonimo.notificaciones.caracteristicas.ofertas.video.descripcion"/>"
+                                        />
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Cleaner"></div>
+                        </div>
+                    </div>
+                    <tiles:insertAttribute name="pie" />
+                </div>

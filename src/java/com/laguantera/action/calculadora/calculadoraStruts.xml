@@ -1,0 +1,60 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="calculadoraLibre" extends="laguantera-default">
+        <!--Calculadora Beta para uso sin permiso y promo  -->
+        <action name="Calculadora">
+            <result>calculadora/calculadora.jsp</result>
+        </action>
+        
+        <action name="Resultado" class="com.laguantera.action.calculadora.Calcular">
+            <result name="ok">calculadora/resultado.jsp</result>
+            <result name="input">calculadora/calculadora.jsp</result>
+            <result name="error">calculadora/error.jsp</result>  
+        </action>
+        
+        <!--Calcular ruta-->
+        <action name="Calcular" class="com.laguantera.action.calculadora.Calcular">
+            <result name="ok" type="tiles">laguantera.anonimo.planificaTuViajeResultado</result>
+            <result name="input" type="tiles">laguantera.anonimo.cargaMultiple</result>
+            <result name="error" type="tiles">laguantera.anonimo.cargaMultiple</result>
+        </action>
+
+        <!--Generacion de resultados en PDF-->
+        <action name="Exportar" class="com.laguantera.action.calculadora.Exportar">
+            <result name="imprimir" type="redirect">${url}</result>
+            <result name="descargar" type="stream">
+                <param name="contentType">application/pdf</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="Factura.pdf"</param>
+                <param name="allowCaching">false</param>
+            </result>
+            <result name="email" type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">inputStream</param>
+            </result>
+            <result name="error">calculadora/error.jsp</result> 
+        </action>       
+    </package>
+
+    <!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="calculadora" extends="usuariosRegistrados">
+        <!--Pagina Inicio-->
+        <action name="PlanificaTuViaje">
+            <result type="redirectAction">PlanificaTuViajeVer</result>
+        </action>
+        
+        <action name="PlanificaTuViajeVer">
+            <result name="success" type="tiles">laguantera.logueado.planificaTuViaje.ver</result>
+        </action>
+        
+        <action name="PlanificaTuViajeAyuda">
+            <result name="success" type="tiles">laguantera.logueado.planificaTuViaje.ayuda</result>
+        </action>        
+    </package>
+
+</struts>

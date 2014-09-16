@@ -1,0 +1,37 @@
+        <%@include file="/WEB-INF/html/anonimo/init.jspf" %>
+
+        <div class="Login">
+            <form accept-charset="UTF-8" action="LoginRealizar">
+                <div class="Campo">
+                    <label class="LoginLabel" for="alias">
+                        <s:text name="laguantera.jsp.alias"/>
+                    </label> 
+                    <input type="text" class="LoginCampo" value=""  maxlength="20" name="alias"/>
+                </div>
+                <div class="Campo">
+                    <label class="LoginLabel" for="password">
+                        <s:text name="laguantera.jsp.contrasegna"/>
+                    </label> 
+                    <input type="password" class="LoginCampo" value="" maxlength="20" name="password" />
+                </div>
+                <div class="Campo">
+                    <input type="submit" title='<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.boton.tittle" />' value='<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.boton.value" />' class="LoginBoton Button Small Blue" />
+                </div>
+            </form>
+
+            <div class="Cleaner"> </div>
+
+            <ul>
+                <li>
+                    <a href="#registrarse" title="<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.registrarse.descripcionEnlace"/>">
+                        <s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.registrarse.texto"/>
+                    </a>
+                </li>
+                <li><span>|</span></li>
+                <li>
+                    <a href="#recuperarContrasena" title="<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.recuperarContrasena.descripcionEnlace"/>">
+                        <s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.recuperarContrasena.texto"/>
+                    </a>
+                </li>
+            </ul>
+        </div>

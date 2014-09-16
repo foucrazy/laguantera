@@ -1,0 +1,205 @@
+/**************************************************************************************************
+ * 					Estilos generales					  *
+ **************************************************************************************************/
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    background-color: #6fb429;
+    background-repeat: repeat;
+    color: white;
+}
+
+/*Estilos Generales para los formularios*/
+form{
+	margin: 5px auto;
+}
+
+form fieldset, fieldset{
+	border:2px solid;
+	margin:10px;
+	padding:5px;	
+}
+
+form fieldset legend, fieldset legend{
+	margin-left:5px;
+	margin-top:-3px;
+}
+
+.fieldHorizontalDerecha{
+    clear:both;
+    display:block;
+    float:left;
+    margin:5px;
+}
+
+.fieldHorizontalDerecha label{
+    display:block;
+    float:left;
+    text-align:right;
+    width:105px;
+}
+
+.fieldHorizontalDerecha label.error{
+    color:red;
+    display:inline-block;
+    margin-left:5px;
+    text-align:left;
+    width:120px;
+}
+
+.fieldHorizontalDerecha input, .fieldHorizontalDerecha textarea, .fieldHorizontalDerecha select{
+    float:left;
+    margin-left:5px;
+    text-align:left;
+}
+
+.fieldHorizontalDerecha input, .fieldHorizontalDerecha select{
+    width:175px;
+}
+
+input[type="checkbox"]{
+    width: 14px;
+}
+
+input:not([type="submit"]):focus{
+     border:solid 2px #73A6FF;  
+     background:#EFF5FF;  
+     color:#000;  
+}
+
+/*Estilos Generales para los botones*/
+.Button, .Button:visited, .ui-formwizard-button:not([disabled="disabled"]), 
+.ui-formwizard-button:visited:not([disabled="disabled"]) { /* botones genéricos */
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #FFF;
+    text-decoration: none;
+    -ms-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-border-radius: 6px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    border-radius: 6px;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor:pointer;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+
+.Button:hover,.ui-formwizard-button:hover:not([disabled="disabled"]) { /* el efecto hover */
+    background-color: #111;
+    color: #FFF;
+}
+
+.Button:active,.ui-formwizard-button:active:not([disabled="disabled"]){ /* el efecto click */
+    top: 1px;
+}
+
+/* botones pequeños */
+.Small.Button, .Small.Button:visited {
+    font-size: 11px ;
+}
+
+/* botones medianos */
+.Button, .Button:visited,.Medium.Button, .Medium.Button:visited,
+.ui-formwizard-button:not([disabled="disabled"]),.ui-formwizard-button:visited:not([disabled="disabled"]) {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}
+
+/* botones grandes */
+.Large.Button, .Large.Button:visited {
+    font-size:14px;
+    padding: 8px 14px 9px;
+}
+
+/* botones extra grandes */
+.Super.Button, .Super.Button:visited {
+    font-size: 34px;
+    padding: 8px 14px 9px;
+}
+
+
+.Red.Button, .Red.Button:visited { 
+    background-color: #E62727; 
+}
+
+.Red.Button:hover{ 
+    background-color: #CF2525; 
+}
+
+.Blue.Button, .Blue.Button:visited,.ui-formwizard-button:not([disabled="disabled"]) {
+    background: #1153c0;
+    background: -moz-linear-gradient(top, #0b2b61, #1153c0);  
+    background: -webkit-gradient(linear, left top, left bottom, from(#0b2b61), to(#1153c0)); 
+}
+
+.Blue.Button:hover{ 
+    background-color: #2575CF; 
+}
+
+/* botones Generales */
+.FloatRigth5{
+    float: right;
+    margin-right: 5px;
+}
+
+/*Estilos para multiples columnas*/
+.Caracteristicas{
+    
+}
+
+.Caracteristica2, .Caracteristica3, .Caracteristica4{
+    float:left;
+}
+
+.Caracteristica2{
+    padding: 20px;
+    width: 45%;
+}
+
+.Caracteristica3{
+    padding: 14px;
+    width: 30%;
+}
+
+.Caracteristica4{
+    padding: 20px;
+    width: 20%;
+}
+
+.Caracteristica2 img,.Caracteristica3 img,.Caracteristica4 img{
+	display: block;
+	margin: 0 auto;
+}
+
+.Caracteristica2 h3,.Caracteristica3 h3, .Caracteristica4 h3{
+    text-align: center;
+}
+
+.Caracteristica2 .VideoClass,.Caracteristica3 .VideoClass, .Caracteristica4 .VideoClass{
+    display: block;
+    margin-top: 10px;
+}
+
+.VideoClass img{
+    width: 100%;
+}

@@ -1,0 +1,16 @@
+
+            <%@include file="../../init.jspf" %>
+            
+            <ul>
+                <tiles:useAttribute id="menuSecundarioList" name="menuSecundarioList" classname="java.util.List" />
+                <c:forEach var="menuSecundarioElement" items="${menuSecundarioList}" varStatus="status">
+                    <li>
+                        <a href="${menuSecundarioElement.link}" title="<fmt:message key='${menuSecundarioElement.tooltip}'/>">
+                             <fmt:message key='${menuSecundarioElement.value}'/>
+                        </a>
+                    </li>
+                    <c:if test="${not status.last}">
+                        <li>|</li>
+                    </c:if>
+                </c:forEach>
+            </ul>

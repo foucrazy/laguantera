@@ -1,0 +1,130 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="usuarioAnonimo" extends="laguantera-default">
+        <!--Action de usuario anonimo-->
+        <action name="InicioAnonimo">
+            <result type="redirectAction">InicioTodo</result>
+        </action>
+
+        <action name="InicioTodo">
+            <result type="tiles">laguantera.anonimo.cargaMultiple</result>
+        </action>
+        
+        <action name="LoginRealizar" class="com.laguantera.action.usuario.LogIn">
+            <result name="input" type="tiles">laguantera.anonimo.error</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+            <result name="ok" type="redirectAction">InicioUsuario</result>
+        </action>
+        
+        <action name="LogoutRealizar" class="com.laguantera.action.usuario.LogOut">
+            <result name="input" type="tiles">laguantera.anonimo.error</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+            <result name="ok" type="redirectAction">InicioUsuario</result>
+        </action>        
+        
+        <action name="RegistroRealizar" class="com.laguantera.action.usuario.AddUsuario">
+            <result name="input" type="tiles">laguantera.anonimo.error</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+        </action>
+        
+        <action name="recuperarContrasena" class="com.laguantera.action.usuario.RecuperarPass">
+            <result name="input" type="tiles">laguantera.anonimo.error</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+        </action>
+    </package>
+    
+    <package name="usuarioLogueado" extends="usuariosRegistrados">
+        <!--Action de usuario registrado-->
+        <action name="InicioUsuario">
+            <result type="redirectAction">InicioVer</result>
+        </action>
+
+        <!--Pagina Inicio-->
+        <action name="Inicio">
+            <result type="redirectAction">InicioVer</result>
+        </action>
+        
+        <action name="InicioVer">
+            <result name="success" type="tiles">laguantera.logueado.inicio.ver</result>
+        </action>
+        
+        <!--Datos de Usuario-->
+        <action name="CuentaUsuario">
+            <result type="redirectAction">CuentaUsuarioVer</result>
+        </action>
+        
+        <action name="CuentaUsuarioVer" class="com.laguantera.action.usuario.LoadUsuario">
+            <interceptor-ref name="controlAccesoRetrieveMessage" />
+            <result name="ok" type="tiles">laguantera.logueado.cuentaUsuario.ver</result>
+            <result name="error" type="tiles">laguantera.logueado.cuentaUsuario.ver</result>
+        </action>
+        
+        <action name="CuentaUsuarioEditar" class="com.laguantera.action.usuario.LoadUsuario">
+            <interceptor-ref name="controlAccesoRetrieveMessage" />
+            <result name="ok" type="tiles">laguantera.logueado.cuentaUsuario.editar</result>
+            <result name="error" type="tiles">laguantera.logueado.cuentaUsuario.editar</result>
+        </action>
+        
+        <action name="CuentaUsuarioActualizar" class="com.laguantera.action.usuario.UpdUsuario">
+            <interceptor-ref name="controlAccesoStoreMessage" />
+            <result name="ok" type="redirectAction">CuentaUsuarioVer</result>
+            <result name="input" type="redirectAction">CuentaUsuarioEditar</result>
+            <result name="error" type="redirectAction">CuentaUsuarioEditar</result>
+        </action>
+        
+        <action name="CuentaUsuarioInvitar">
+            <interceptor-ref name="controlAccesoRetrieveMessage" />
+            <result name="success" type="tiles">laguantera.logueado.cuentaUsuario.invitar</result>
+        </action>
+        
+        <action name="CuentaUsuarioInvitarAmigo" class="com.laguantera.action.usuario.Invitar">
+            <interceptor-ref name="controlAccesoStoreMessage" />
+            <result name="input" type="redirectAction">CuentaUsuarioInvitar</result>
+            <result name="ok" type="redirectAction">CuentaUsuarioInvitar</result>
+            <result name="error" type="redirectAction">CuentaUsuarioInvitar</result>
+        </action>
+        
+        <action name="CuentaUsuarioBorrar">
+            <interceptor-ref name="controlAccesoRetrieveMessage" />
+            <result name="success" type="tiles">laguantera.logueado.cuentaUsuario.borrar</result>
+        </action>
+        
+        <action name="BorrarCuentaUsuarioEjecutar" class="com.laguantera.action.usuario.DelUsuario">
+            <interceptor-ref name="controlAccesoStoreMessage" />
+            <result name="ok" type="redirectAction">InicioAnonimo</result>
+            <result name="input" type="redirectAction">CuentaUsuarioBorrar</result>
+            <result name="error" type="redirectAction">CuentaUsuarioBorrar</result>
+        </action>
+
+        <action name="Salir" class="com.laguantera.action.usuario.LogOut">
+            <interceptor-ref name="controlAccesoStoreMessage" />
+            <result name="ok" type="redirectAction">InicioAnonimo</result>
+            <result name="error" type="redirectAction">InicioVer</result>
+        </action>
+
+<!--   <action name="EditarCuentaUsuarioEjecutar" class="com.laguantera.action.usuario.UpdUsuario">
+            <result name="input" type="tiles">laguantera.usuario.cuentaUsuario.editar</result>
+            <result name="ok" type="tiles">laguantera.usuario.correcto</result>
+            <result name="error" type="tiles">laguantera.usuario.error</result>
+        </action>
+
+        <action name="BorrarCuentaUsuarioJSP">
+            <result name="success">/WEB-INF/html/jsp/segmentosWeb/cuentaUsuario/borrar.jsp</result>
+        </action>
+
+        <action name="BorrarCuentaUsuarioEjecutar" class="com.laguantera.action.usuario.DelUsuario">
+            <result name="input" type="tiles">laguantera.usuario.cuentaUsuario.borrar</result>
+            <result name="ok" type="redirectAction">InicioAnonimo</result>
+            <result name="error" type="tiles">laguantera.usuario.error</result>
+        </action>
+-->
+    </package>    
+
+</struts>

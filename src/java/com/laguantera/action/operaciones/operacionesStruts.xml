@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="operaciones" extends="usuariosRegistrados">
+
+        <!--Pagina Inicio-->
+        <action name="Operaciones">
+            <result type="redirectAction">OperacionVer</result>
+        </action>
+        
+        <action name="OperacionListado">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.listado</result>
+        </action>
+        
+        <action name="OperacionVer">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.ver</result>
+        </action>
+        
+        <action name="OperacionAnadir">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.anadir</result>
+        </action>
+        
+        <action name="OperacionEditar">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.editar</result>
+        </action>
+        
+        <action name="OperacionFactura">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.factura</result>
+        </action>
+        
+        <action name="OperacionProximas">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.proximas</result>
+        </action>
+        
+        <action name="OperacionConsejos">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.consejos</result>
+        </action>
+        
+        <action name="OperacionBorrar">
+            <result name="success" type="tiles">laguantera.logueado.Operacion.borrar</result>
+        </action>
+                
+    </package>
+</struts>

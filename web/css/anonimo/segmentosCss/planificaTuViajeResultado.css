@@ -1,0 +1,89 @@
+body {
+    background:url("/laguantera/img/anonimo/css/segmentosCss/planificaTuViaje/carretera2.png") no-repeat scroll left top #666D75;
+}
+
+.PlanificaTuViajeResultado{
+  width: 920px;  
+}
+
+#buscadorPlanificaTuViajeResultado{
+    margin: 5px;
+    float: left;
+    width: 30%;
+}
+
+.Datos {
+    background:url("/laguantera/img/anonimo/css/segmentosCss/planificaTuViaje/papel.png") no-repeat scroll left top transparent;
+    font-family:'Courier New',Courier,monospace;
+    font-size:12px;
+    margin-left: 5px;
+    padding:150px 30px 30px;
+    width:350px;
+    color:black;
+    float: left;
+}
+
+.Datos .Fecha {
+    border-bottom:1px solid black;
+    font-size:18px;
+}
+
+.Datos .Resultado {
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+.Resultado{
+    font-weight:bold;
+}
+
+.Opciones {
+    background:none repeat scroll 0 0 #F2A81D;
+    border-bottom:4px solid orange;
+    border-radius:7px 7px 7px 7px;
+    height:75px;
+    margin-left:25px;
+    padding:10px;
+    text-align:center;
+    width:200px;
+}
+
+.Descarga{
+    width: 10%;
+    float: left;
+    margin: 5px;
+}
+
+#mapaGoogle{
+    height:300px;
+}
+
+.ResultadosGoogle{
+    background:none repeat scroll 0 0 #A5BFDD;
+    border:4px solid #22789F;
+    border-radius:7px 7px 7px 7px;
+    color: black;
+    margin-top: 5px;
+}
+
+.ResultadosGoogleIda, .ResultadosGoogleVuelta{
+    width: 48%;
+    margin-top: 5px;
+    border:4px solid #22789F;
+    border-radius:7px 7px 7px 7px;
+    margin-top: 5px;
+}
+
+.ResultadosGoogleIda{
+    float: left;
+    color: black;
+    background:none repeat scroll 0 0 #A5BFDD;
+}
+
+.ResultadosGoogleVuelta{
+    float: right;
+    color: white;
+    background:none repeat scroll 0 0 red;
+}

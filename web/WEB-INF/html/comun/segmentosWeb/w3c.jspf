@@ -1,0 +1,11 @@
+                    <%@include file="../init.jspf" %>
+
+                    <h1 class="TituloPagina">Css</h1>
+                    <div class="CuerpoPagina">
+                        <p>
+                            css validator
+                        </p>
+                        <p>
+                            html validator
+                        </p>
+                    </div>

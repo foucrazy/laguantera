@@ -1,0 +1,33 @@
+                <%@include file="../init.jspf" %>
+                
+                <div id="recuperarContrasena" class="Ocultar">
+                    <h1 class="TituloPagina">Recuperar Contraseña</h1>
+                    <div class="CuerpoPagina">
+                        <p>
+                            <s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.recuperarContrasena.intro"/>
+                        </p>
+                        
+                        <form action="<s:url action='recuperarContrasena'/>" method="POST" id="formularioRegistro">
+                            <div class="fieldHorizontalDerecha">
+                                <label for="email">
+                                    <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.email.texto"/>
+                                </label>
+                                <input type="text" id="email" name="email" required="true"/>
+                            </div>
+
+                            <laguantera:captchaTag 
+                                captchAud="/laguantera/audio.wav" 
+                                captchaImg="/laguantera/stickyImg.png" 
+                                divClass="fieldCaptcha"
+                                idInput="answer"
+                            />
+
+                            <div class="bottonBlock">
+                                <input type="submit" title='<s:text name="laguantera.jsp.anonimo.plantillaBase.Cabecera.login.recuperarContrasena.title" />' value='<s:text name="laguantera.jsp.boton.enviar" />' class="LoginBoton Button Small Blue FloatRigth5" />
+                                <div class="Cleaner"></div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <tiles:insertAttribute name="pie" />
+                </div>

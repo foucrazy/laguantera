@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping default-cascade="all">
+  <class catalog="laguantera" name="com.laguantera.dao.Modelos" table="modelos">
+    <id name="idModelo" type="java.lang.Integer">
+      <column name="idModelo"/>
+      <generator class="identity"/>
+    </id>    
+    <many-to-one class="com.laguantera.dao.Marcas" fetch="select" name="marcas">
+      <column name="idMarca" not-null="true"/>
+    </many-to-one>
+    <property name="nombreModelo" type="string">
+      <column length="30" name="nombreModelo"/>
+    </property>
+    <set inverse="true" name="vehiculoses">
+      <key>
+        <column name="idModelo" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Vehiculos"/>
+    </set>
+    <set inverse="true" name="info_vehiculoses">
+      <key>
+        <column name="idModelo" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Info_Vehiculos"/>
+    </set>    
+  </class>
+</hibernate-mapping>

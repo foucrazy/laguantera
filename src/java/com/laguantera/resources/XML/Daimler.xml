@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichero>
+<marca>
+<AW>Daimler</AW>
+<modelo>
+<AX>Super Eight</AX>
+<AA>
+<AZ>
+<Motorizacion>4.2 Compressor 395cv / 295kw Aut.</Motorizacion>
+<kw>294.5515</kw>
+<combustible>G</combustible>
+<cv>395</cv>
+<cilindrada>4196</cilindrada>
+<pesoVacio>1735</pesoVacio>
+<Par></Par>
+<marchas>6</marchas>
+<cambio>A</cambio>
+<segunda>19.4283527204503</segunda>
+<tercera>29.9094377406932</tercera>
+<cuarta>39.8792503209243</cuarta>
+<quinta>52.2555693860387</quinta>
+<sexta>65.8874570519618</sexta>
+<septima></septima>
+<octava></octava>
+<Puertas>5</Puertas>
+<Cilindros>8</Cilindros>
+<vMAX>250</vMAX>
+<aceleracion>5.3</aceleracion>
+<Cons1>8.7</Cons1>
+<Cons2>12.1</Cons2>
+<Cons3>17.9</Cons3>
+<EmisionesCo2>289</EmisionesCo2>
+<anioComienzo>2008</anioComienzo>
+<anioFin>2009</anioFin>
+</AZ>
+</AA></modelo>
+</marca>
+</fichero>

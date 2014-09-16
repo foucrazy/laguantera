@@ -1,0 +1,8 @@
+                    <%@include file="../init.jspf" %>
+
+                    <h1 class="TituloPagina">Politica Privacidad</h1>
+                    <div class="CuerpoPagina">
+                        <p>
+                            Nos estas vendiendo tu alma y todo lo que tienes!
+                        </p>
+                    </div>

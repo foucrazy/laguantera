@@ -1,0 +1,198 @@
+A) Paginas
+
+    1.Usuario no registrado
+
+        1.1. Inicio (Todas las paginas: ¿Que es la guantera?, Planifica Tu Viaje, Galería de Imágenes, Gestión de Gastos, Notificaciones)
+        1.2. Resultados Calculadora
+        1.3. Algún Error
+        1.4. Registro
+        1.5. Recuperar contraseña
+
+    2.Usuario Registrado
+
+        2.1. Pagina Principal: (tras logarse)
+            2.1.1. Datos a mostrar a otros usuarios: Perfil resumido del usuario
+
+            2.1.2. Menú 1:
+                2.1.1.2.1. Inicio
+                2.1.1.2.2. Vehículos
+                2.1.1.2.3. Operaciones
+                2.1.1.2.4. Galerías
+                2.1.1.2.5. Planifica tu viaje
+                2.1.1.2.6. Cuenta usuario
+
+            2.1.3. Menú 2: Nada
+
+            2.1.4. Menú 3: Nada
+
+        2.2. Vehículo
+            2.2.1. Lista de vehiculos del usuario
+
+            2.2.2. Menú 1: el de la P. Principal
+
+            2.2.3. Menú 2:
+                2.2.3.1. Lista vehículos
+                2.2.3.2. Añadir vehículo
+
+            2.2.4. Menú 3(por vehículo):
+                2.2.4.1. Ver vehículo
+                2.2.4.2. Editar vehículo
+                2.2.4.3. Borrar vehículo
+
+        2.3. Operaciones
+
+            2.3.1. Lista de operaciones por vehículo
+            2.3.2. Menú 1: el de la P. Principal
+
+            2.3.3. Menú 2:
+
+                2.3.3.1. Lista Operaciones por vehículo
+
+                2.3.3.2. Añadir Operaciones
+
+                2.3.3.3. Modificar Operaciones (No es mejor tenerlo a lado del coche en vez de arriba)
+
+                2.3.3.4. Borrar Operaciones (No es mejor tenerlo a lado del coche en vez de arriba)
+
+                2.3.3.5. Ver operaciones (No es mejor tenerlo a lado del coche en vez de arriba)
+
+                2.3.3.6. Factura
+
+                2.3.3.7. Próximas Operaciones
+
+                2.3.3.8. Consejos
+
+        2.4. Galerías
+
+            2.4.1. Lista de galerías del usuario
+
+            2.4.2. Menú 1: el de la P. Principal
+
+            2.4.3. Menú 2:
+
+                2.4.3.1. Listar Galerías por vehículo
+
+                2.4.3.2. Ver Galerías (No es mejor tenerlo a lado del coche en vez de arriba)
+
+                2.4.3.3. Añadir Galerías
+
+                2.4.3.4. Modificar Galerías(No es mejor tenerlo a lado del coche en vez de arriba)
+
+                2.4.3.5. Eliminar Galerías (No es mejor tenerlo a lado del coche en vez de arriba)
+
+        2.5. Calculadora Viaje
+
+            2.5.1. Todo lo relacionado con el calculo y la gestión del viaje
+
+            2.5.2. Menu 1: el de la P. Principal
+
+        2.6. Cuenta Usuario
+
+            2.6.1. Todo lo relacionado con la gestion de los datos de usuario
+
+            2.6.2. Menu 1: el de la P. Principal
+
+            2.6.3. Menu 2:
+
+                2.6.3.1. Ver Datos usuario
+
+                2.6.3.2. Modificar datos usuario
+
+                                2.6.3.3. Invitar Amigo (Habria que meterlos)
+
+                                2.6.3.4. Borrar Usuario (Habria que meterlos)
+
+
+B) Funcionalidad segun el tipo usuario
+
+    1. Usuarios
+        1.1. Normales
+            1.1.1. Cosas Globales.
+            1.1.2. Alertas Correo
+            1.1.3. Carnet Socio
+            1.1.4. Valoraciones
+            1.1.5. Informacion Desguace
+            1.1.6. Busqueda centrada en sitios(talleres)
+
+        1.2. Premium
+            1.2.1. Calculo gastos vieje al detalle(usando más información detallada)
+            1.2.2. Alertas SMS
+            1.2.3. Hablar con experto
+            1.2.4. Gestion de todos los elementos a traves de nuestra web
+
+    2. taller
+        2.1. Normales
+        2.2. Premium
+
+
+C) Circuitos y tandas
+
+
+Arquitectura de la aplicacion:
+====================
+
+1. eViaje
+
+1.1. Documentacion: aqui pondremos toda la informacion de la aplicacion que vayamos viendo necesaria, configuracion y cosas asi para explicarlas
+
+1.2. Proyecto: El proyecto en si
+
+1.2.1. Branches: Carpeta de subversion que se utiliza para crear ramas paralelas en el proyecto para hacer desarrollos paralelos, por ejemplo, desarrollo de una nueva version y arreglo de errores.
+
+1.2.2. Tags: Carpeta de subversion que guarda un estado determinado del codigo, por ejemplo, cuando tengamos la version 1.0 se establece un tag y si en la version 1.7 queremos volver a la version inicial tenemos ya el tag ese y no tenemos que andar buscando por numero de version.
+
+1.2.3. Trunk: Carpeta que contendra el proyecto en si, tengo que mirar la configuracion para no permitir que se suban los fichero .class y cosas asi, solo codigo y fichero de configuracion.
+
+1.2.3.1. Web Pages: contendra los fichero de configuracion, jsp, css, imagenes,...,etc.
+
+1.2.3.1.1. CSS: todos los ficheros css e imagenes del diseño.
+
+1.2.3.1.2. Documentos: Todos los documentos estaticos de la aplicacion que no se vayan a modificar
+
+1.2.3.1.3. Imagenes: Todas las imagenes estaticas de la aplicacion y que no sean de diseño
+
+1.2.3.1.4. Invitado: Todas las paginas a las que puede acceder un usuario no registrado.
+
+1.2.3.1.5. Js: Todos los fichero javaScript que vayamos a utilizar
+
+1.2.3.1.6. WEB-INF: contendra ficheros de configuracion, asi como paginas privadas.
+
+1.2.3.1.6.1. Errores: contendra todas las paginas de error.
+
+1.2.3.1.6.2. Paginas: contendra todas las paginas de un usuario registrado
+
+1.2.3.1.6.2.1. CalculadoraViaje. Todas las paginas que tengan que ver con el calculo del viaje.
+
+1.2.3.1.6.2.2. Galerias: Todas las paginas que tengan que ver con la gestion de la galeria
+
+1.2.3.1.6.2.3. Operaciones: Todas las paginas que tengan que ver con la gestion de las operaciones
+
+1.2.3.1.6.2.4. PaginaPrincipal: Todas las paginas que tengan que ver con la gestion de la pagina principal.
+
+1.2.3.1.6.2.5. Usuario: Todas las paginas que tengan que ver con la gestion de los datos de usuario
+
+1.2.3.1.6.2.6. Vehiculo: Todas las paginas que tengan que ver con la gestion de Vehiculos
+
+1.2.3.2. src: todas los ficheros fuentes.
+
+1.2.3.2.1. Funcionalidad: Todo lo que puede hacer el usuario.
+
+1.2.3.2.1.1. CalculadoraViaje: Todas las acciones necesarias para el calculo del viaje.
+
+1.2.3.2.1.2. Galerias: Todas las acciones necesarias para la gestion de las imagenes
+
+1.2.3.2.1.3. Operaciones: Todas las acciones necesarias para la gestion de las operaciones de mantenimiento.
+
+1.2.3.2.1.4. PaginaPrincipal: Todas las acciones necesarias para la gestion de la pagina principal.
+
+1.2.3.2.1.5. Usuario: Todas las acciones necesarias para la gestion de la informacion de usuario.
+
+1.2.3.2.1.6. Vehiculo: Todas las acciones necesarias para la gestion de vehiculos.
+
+1.2.3.2.2. Utilidades: Todos aquellos elemento que sirvan de apoyo para el funcionamiento de la aplicacion.
+
+1.2.3.2.2.1. Correo: Todo lo necesario para el envio de correos.
+
+1.2.3.2.2.2. Log: Todo lo necesario para el manejo de logs
+
+1.2.3.2.3. Persistencia: todos los elementos de hibernate y persistencia de nuestra aplicacion.

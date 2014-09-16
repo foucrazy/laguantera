@@ -1,0 +1,16 @@
+        <%@include file="../../init.jspf" %>
+
+        <div class="Usuario">
+            <div class="UsuarioIzq">
+                <a title="<fmt:message key='laguantera.jsp.logueado.comun.login.usuario.descripcion'/>" href="<s:url action="CuentaUsuario"/>">
+                     <fmt:message key='laguantera.jsp.logueado.comun.login.mensajeBienvenida'>
+                         <fmt:param value="usuario" />
+                     </fmt:message>
+                </a>
+            </div>
+            <div class="UsuarioDer">
+                <a title="<fmt:message key='laguantera.jsp.logueado.comun.login.salir.titulo'/>" href="<s:url action="Salir"/>">
+                    <fmt:message key='laguantera.jsp.logueado.comun.login.salir.descripcion'/>
+                </a>
+            </div>
+        </div>

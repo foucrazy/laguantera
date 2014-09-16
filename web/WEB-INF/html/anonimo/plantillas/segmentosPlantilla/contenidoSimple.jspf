@@ -1,0 +1,5 @@
+            <%@include file="../../init.jspf" %>
+
+            <div id="contenido" class="CuerpoSimple">
+                 <tiles:insertAttribute name="contenido" />
+            </div>

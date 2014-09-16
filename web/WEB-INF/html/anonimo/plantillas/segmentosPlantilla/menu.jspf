@@ -1,0 +1,23 @@
+        <%@include file="../../init.jspf" %>
+
+        <div id="menu" class="Menu">
+            <ul>
+                <tiles:useAttribute id="menuList" name="menuList" classname="java.util.List" />
+                <c:forEach var="menuElement" items="${menuList}">
+                    <li
+                        <c:if test='${!empty menuElement.icon}'>
+                            id='${menuElement.icon}'
+                        </c:if>
+                    >
+                        <a 
+                            href='${menuElement.link}' 
+                            title='<fmt:message key="${menuElement.tooltip}"/>'
+                        >
+                            <fmt:message key='${menuElement.value}'/>
+                        </a>
+                    </li>
+                </c:forEach>
+
+                <li class="MenuDeslizante"></li>
+            </ul>
+       </div>

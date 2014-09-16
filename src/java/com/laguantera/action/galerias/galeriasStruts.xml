@@ -1,0 +1,82 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="galeriasLibre" extends="laguantera-default">
+
+    </package>
+
+<!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="galerias" extends="usuariosRegistrados">
+        <action name="Galerias">
+            <result type="redirectAction">GaleriaListado</result>
+        </action>
+
+        <!-- Listado de las galerias del usuario-->
+        <action name="GaleriaListado" class="com.laguantera.action.galerias.LoadGalerias">
+            <result name="ok" type="tiles">laguantera.logueado.galeria.listado</result>            
+        </action>
+        
+        <!-- Detalles de una galeria-->
+        <action name="GaleriaVer" class="com.laguantera.action.galerias.GetGaleria">
+            <result name="ok" type="tiles">laguantera.logueado.galeria.ver</result>            
+        </action>
+        
+        <!-- Formulario de nueva galeria-->
+        <action name="GaleriaAnadir" class="com.laguantera.action.vehiculo.GetVehiculos">
+            <result name="ok" type="tiles">laguantera.logueado.galeria.anadir</result>            
+        </action>
+
+        <!-- Alta de una nueva galeria-->
+        <action name="addGaleria" class="com.laguantera.action.galerias.AddGaleria">
+            <result name="input" type="redirectAction">GaleriaAnadir</result>
+            <result name="ok" type="redirectAction">GaleriaListado</result>
+        </action>      
+                        
+        <!-- Formulario de edicion de una geleria-->
+        <action name="GaleriaEditar" class="com.laguantera.action.galerias.GetGaleria">
+            <interceptor-ref name="controlAccesoRetrieveMessage"></interceptor-ref>
+            <result name="ok" type="tiles">laguantera.logueado.galeria.editar</result>            
+        </action>
+        
+        <!-- Edicion de una galeria-->
+        <action name="editGaleria" class="com.laguantera.action.galerias.UpdGaleria">
+            <interceptor-ref name="controlAccesoStoreMessage"></interceptor-ref>
+            <result name="input" type="redirectAction">GaleriaEditar</result>
+            <result name="ok" type="redirectAction">GaleriaListado</result>
+        </action>              
+        
+        <action name="GaleriaBorrar" class="com.laguantera.action.galerias.DelGaleria">
+            <result name="ok" type="redirectAction">GaleriaListado</result>            
+        </action>
+                
+        <!-- Formulario de nuevo multimedia-->
+        <action name="MultimediaAnadir" class="com.laguantera.action.galerias.LoadTiposMultimedia">
+            <result name="ok" type="tiles">laguantera.logueado.multimedia.anadir</result>            
+        </action>                
+        
+        <!-- Alta de un nuevo multimedia-->
+        <action name="addMultimedia" class="com.laguantera.action.galerias.AddMultimedia">
+            <result name="input" type="redirectAction">MultimediaAnadir</result>
+            <result name="ok" type="redirectAction">GaleriaListado</result>
+        </action>             
+                
+       <!-- <action name="delMultimedia" class="com.laguantera.action.galerias.DelMultimedia">
+            <result name="input">error.jsp</result>
+        </action>
+
+        <action name="updMultimedia" class="com.laguantera.action.galerias.UpdMultimedia">
+            <result name="input">actualizarMultimedia.jsp</result>
+        </action>
+
+        <action name="editMultimedia" class="com.laguantera.action.galerias.EditMultimedia">
+            <result name="input">/linepolygon.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="ok">/ok.jsp</result>
+        </action>-->
+    </package>
+
+</struts>

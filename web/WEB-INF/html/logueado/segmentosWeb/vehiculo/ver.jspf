@@ -1,0 +1,111 @@
+<%@include file="init.jspf" %>
+
+<div class="content">
+    <c:choose>
+        <c:when test="${vehiculo!=null}" >
+            <!--Ficha vehiculo-->
+            <div>
+                <div>
+                    <img src="
+                         <c:choose>
+                             <c:when test="${vehiculo.imagen!=null && not empty vehiculo.imagen}">
+                                 ${vehiculo.imagen}
+                             </c:when>
+                             <c:otherwise>
+                                 imagenes/defecto/coche.jpg
+                             </c:otherwise>
+                         </c:choose>
+                                 " alt="<s:text name="laguantera.jsp.logueado.vehiculo.common.imagenDescpcion"/>"
+                     />
+                </div>
+                <ul>               
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.matricula"/>: ${vehiculo.matricula}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.marca"/>: ${vehiculo.modelos.marcas.nombreMarca}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.modelo"/>: ${vehiculo.modelos.nombreModelo}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.motor"/>: ${vehiculo.motor}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.tara"/>: ${vehiculo.tara}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.neumaticos"/>: ${vehiculo.neumaticos}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.asientos"/>: ${vehiculo.asientos}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.cilindros"/>: ${vehiculo.cilindros}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.cilindrada"/>: ${vehiculo.cilindrada}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.cv"/>: ${vehiculo.cv}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.kw"/>: ${vehiculo.kw}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.tipoCombustible"/>: ${vehiculo.tiposCombustible.nombre}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.fechaMatriculacion"/>: ${vehiculo.fechaMatriculacion}</li>
+                    <li><s:text name="laguantera.jsp.logueado.vehiculo.common.fechaFabricacion"/>: ${vehiculo.fechaFabricacion}</li>
+                </ul>
+                <div class="operacionesVehiculo">
+                    <ul>
+                        <c:url var="editarDatosVehiculo" value="VehiculoEditar">
+                            <c:param name="idVehiculo" value='${vehiculo.idVehiculo}'/>
+                        </c:url>
+                        <li><a href="${editarDatosVehiculo}" title="<s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.editar.descripcion"/>"><s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.editar.titulo"/></a> </li>
+
+                        <c:url var="borrarDatosVehiculo" value="VistaBorrarVehiculo.action">
+                            <c:param name="idVehiculo" value='${vehiculo.idVehiculo}'/>
+                        </c:url>
+                        <c:url var="borrarVehiculoRealizar" value="BorrarVehiculoRealizar.action">
+                            <c:param name="idVehiculo" value='${vehiculo.idVehiculo}'/>
+                        </c:url>
+                        <li><a href="${borrarDatosVehiculo}" title="" onclick="submitDelete('<s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.borrar.titulo"/>','<s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.borrar.tituloConfirmacion"/>',aBorrarUsuario,'href',${borrarVehiculoRealizar},'&confirmacion=true','&confirmacion=false')"><s:text name="laguantera.jsp.logueado.vehiculo.menuOpciones.borrar.titulo"/></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--FIN Ficha vehiculo-->                                 
+        
+            <div class="clearFloat"></div>
+            
+            <hr>
+            <div class="operaciones">
+                 <s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones"/><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones.fecha"/></th>
+                            <th><s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones.nombre"/></th>
+                            <th><s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones.concepto"/></th>
+                            <th><s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones.cantidad"/></th>
+                            <th><s:text name="laguantera.jsp.logueado.vehiculo.tablaOperaciones.importe"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/2001</td>
+                            <td>Felix</td>
+                            <td>Mantenimiento</td>
+                            <td>1</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="clearFloat"></div><hr>
+            
+            <div class="galerias">
+                <h2><s:text name="laguantera.jsp.logueado.vehiculo.galerias.titulo"/></h2>
+                <dl>
+                    <dt>Galería1:</dt>                    
+                    <dt>Galería2:</dt>                    
+                </dl>
+            </div>        
+                
+            <div class="clearFloat"></div><hr>
+            
+            <div class="avisos">
+                <h2><s:text name="laguantera.jsp.logueado.vehiculo.avisos.titulo"/></h2>
+                <dl>
+                    <dt>Aviso1:</dt>
+                    <dd>Descripcion del aviso</dd>
+                    <dt>Aviso2:</dt>
+                    <dd>Descripcion del aviso</dd>
+                </dl>
+            </div>                                  
+        </c:when>
+        <c:otherwise>
+            <p class="sinElementos">
+                <s:text name="laguantera.jsp.logueado.vehiculo.noExiste" />
+            </p>
+        </c:otherwise>
+    </c:choose>
+</div>

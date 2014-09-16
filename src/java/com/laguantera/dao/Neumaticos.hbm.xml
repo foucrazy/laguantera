@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-mar-2011 22:55:53 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.Neumaticos" table="neumaticos">
+    <id name="idNeumatico" type="java.lang.Integer">
+      <column name="idNeumatico"/>
+      <generator class="identity"/>
+    </id>
+    <property name="marca" type="string">
+      <column length="30" name="marca"/>
+    </property>
+    <property name="modelo" type="string">
+      <column length="150" name="modelo"/>
+    </property>
+    <property name="ancho" type="java.lang.Integer">
+      <column name="ancho"/>
+    </property>
+    <property name="alto" type="java.lang.Integer">
+      <column name="alto"/>
+    </property>
+    <property name="diametro" type="java.lang.Integer">
+      <column name="diametro"/>
+    </property>
+    <property name="carga" type="java.lang.Integer">
+      <column name="carga"/>
+    </property>
+    <property name="velocidad" type="string">
+      <column length="10" name="velocidad"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="10" name="tipo"/>
+    </property>
+    <property name="extra" type="string">
+      <column length="10" name="extra"/>
+    </property>
+    <property name="proveedor" type="string">
+      <column length="50" name="proveedor"/>
+    </property>
+    <property name="precio" type="java.lang.Double">
+      <column name="precio" precision="22" scale="0"/>
+    </property>
+    <property name="enlace" type="string">
+      <column name="enlace"/>
+    </property>
+  </class>
+</hibernate-mapping>

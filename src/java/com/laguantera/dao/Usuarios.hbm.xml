@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.Usuarios" table="usuarios">
+    <id name="idUsuario" type="java.lang.Integer">
+      <column name="idUsuario"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.laguantera.dao.TiposUsuario" fetch="select" name="tiposUsuario">
+      <column name="idTipoUsuario" not-null="true"/>
+    </many-to-one>
+    <property name="alias" type="string">
+      <column length="20" name="alias" not-null="true" unique="true"/>
+    </property>
+    <property name="password" type="string">
+      <column length="20" name="password" not-null="true"/>
+    </property>
+    <property name="codigoPostal" type="java.lang.Integer">
+      <column name="codigoPostal"/>
+    </property>
+    <property name="email" type="string">
+      <column length="200" name="email" not-null="true" unique="true"/>
+    </property>
+    <set inverse="true" name="vehiculoses">
+      <key>
+        <column name="idUsuario" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Vehiculos"/>
+    </set>
+  </class>
+</hibernate-mapping>

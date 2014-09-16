@@ -1,0 +1,59 @@
+.CuerpoMultiple{
+    width: 100%;
+    height: 100%;
+    background: url("/laguantera/img/anonimo/css/plantillas/fondoCiudad2.png") no-repeat scroll;
+}
+
+.Mostrar{
+    width: 850px;
+    margin-left:350px;
+    padding-top:50px;
+    padding-bottom:10px;
+}
+
+.TituloPagina, .CuerpoPagina, .Pie{
+    background: #151F2B;
+    border: 2px solid #202F42;
+    padding: 10px;
+
+    /* Theoretically for IE 8 & 9 (more valid) */
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=80);
+
+    /* Older than Firefox 0.9 */
+    -moz-opacity:0.8;
+
+    /* Safari 1.x (pre WebKit!) */
+    -khtml-opacity: 0.8;
+
+    /* Modern!
+    /* Firefox 0.9+, Safari 2?, Chrome any?
+    /* Opera 9+, IE 9+ */
+    opacity: 0.8;
+}
+
+.TituloPagina{
+    width:100%;
+    color:#FFFFFF;
+    display:block;
+    font-size:18px;
+    font-weight:bold;
+    text-transform:uppercase;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.CuerpoPagina, .Pie{
+    width:100%;
+    margin-top: 5px;
+    text-align:justify;
+}

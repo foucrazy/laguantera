@@ -1,0 +1,33 @@
+.Info, .Exito, .Alerta, .Error {
+       font-family:Arial, Helvetica, sans-serif; 
+       font-size:13px;
+       border: 1px solid;
+       margin: 5px 0;
+       padding: 7px 7px 7px 50px;
+       background-repeat: no-repeat;
+       background-position: 10px center;
+}
+
+.Info {
+       color: #00529B;
+       background-color: #BDE5F8;
+       background-image: url('/laguantera/img/tags/resultadoAction/info.png');
+}
+
+.Exito {
+       color: #4F8A10;
+       background-color: #DFF2BF;
+       background-image:url('/laguantera/img/tags/resultadoAction/exito.png');
+}
+
+.Alerta {
+       color: #9F6000;
+       background-color: #FEEFB3;
+       background-image: url('/laguantera/img/tags/resultadoAction/alerta.png');
+}
+
+.Error {
+       color: #D8000C;
+       background-color: #FFBABA;
+       background-image: url('/laguantera/img/tags/resultadoAction/error.png');
+}

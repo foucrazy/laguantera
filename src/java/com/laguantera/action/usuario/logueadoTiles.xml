@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+        <!--Plantilla Base-->
+        <definition name="laguantera.logueado.plantillaBase"  template="/WEB-INF/html/logueado/plantillas/plantillaBase.jsp" >
+            <put-attribute name="cabecera" value="/WEB-INF/html/logueado/plantillas/segmentosPlantilla/cabecera.jspf" />
+            <put-attribute name="login" value="/WEB-INF/html/logueado/plantillas/segmentosPlantilla/login.jspf" cascade="true"/>
+            <put-attribute name="menu" value="/WEB-INF/html/logueado/plantillas/segmentosPlantilla/menu.jspf"/>
+            <put-attribute name="menuSecundario" value="/WEB-INF/html/logueado/plantillas/segmentosPlantilla/menuSecundario.jspf" />            
+            <put-attribute name="pie" value="/WEB-INF/html/logueado/plantillas/segmentosPlantilla/pie.jspf" />
+            
+            <put-list-attribute name="listaCss">
+                <add-attribute value="./css/comun/reset.css" />
+                <add-attribute value="./css/logueado/plantillas/plantillaBase.css" />
+                <add-attribute value="./css/logueado/plantillas/segmentosPlantilla/cabecera.css"/>
+                <add-attribute value="./css/logueado/plantillas/segmentosPlantilla/login.css"/>
+                <add-attribute value="./css/logueado/plantillas/segmentosPlantilla/menu.css"/>
+                <add-attribute value="./css/logueado/plantillas/segmentosPlantilla/pie.css"/>
+                <add-attribute value="./css/tags/resultadoAction.css"/>
+            </put-list-attribute>
+            
+            <put-list-attribute name="pieList" cascade="true">
+                <item link="#contactar" value="laguantera.jsp.anonimo.plantillaBase.pie.contactar.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.contactar.descripcionEnlace"/>
+                <item link="#politicaPrivacidad" value="laguantera.jsp.anonimo.plantillaBase.pie.politicaPrivacidad.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.politicaPrivacidad.descripcionEnlace"/>
+                <item link="#mapaWeb" value="laguantera.jsp.anonimo.plantillaBase.pie.mapaWeb.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.mapaWeb.descripcionEnlace"/>
+                <item link="#w3c" value="laguantera.jsp.anonimo.plantillaBase.pie.w3c.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.w3c.descripcionEnlace"/>
+            </put-list-attribute>
+
+            <put-list-attribute name="listaJs">
+                <add-attribute value="./js/jquery/core/jquery-1.7.1.js" />
+                <add-attribute value="./js/jquery/core/jquery-ui-1.8.17.js" />
+            </put-list-attribute>
+        </definition>
+        
+        <!--Paginas especificas Inicio-->
+        <definition name="laguantera.logueado.inicio"  extends="laguantera.logueado.plantillaBase">
+
+            <put-attribute name="barraDerechaURLImagen"  value="./img/logueado/html/segmentosWeb/inicio/inicio.png" />
+            <put-attribute name="barraDerechaURLDescripcion"  value="laguantera.jsp.logueado.inicio.barralateral.img.descripcion" />
+            <put-attribute name="barralaterlaDescripcion"  value="laguantera.jsp.logueado.inicio.barralateral.descripcion" />
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="Inicio" value="laguantera.jsp.logueado.comun.menu.inicio.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.inicio.descripcion"
+                      icon="Seleccionada"
+                />
+                <item link="Vehiculos" value="laguantera.jsp.logueado.comun.menu.vehiculos.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.vehiculos.descripcion"
+                />
+                <item link="Operaciones" value="laguantera.jsp.logueado.comun.menu.operaciones.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.operaciones.descripcion"
+                />
+                <item link="Galerias" value="laguantera.jsp.logueado.comun.menu.galerias.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.galerias.descripcion"
+                />
+                <item link="PlanificaTuViaje" value="laguantera.jsp.logueado.comun.menu.planificaTuViaje.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.planificaTuViaje.descripcion"
+                />
+                <item link="CuentaUsuario" value="laguantera.jsp.logueado.comun.menu.cuentaUsuario.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.cuentaUsuario.descripcion"
+                />
+            </put-list-attribute>
+            
+            <put-list-attribute name="menuSecundarioList" cascade="true">
+                <!--<item link="InicioVer" value="laguantera.jsp.logueado.inicio.menuSecundario.ver.titulo" 
+                      tooltip="laguantera.jsp.logueado.inicio.menuSecundario.ver.descripcion"
+                />
+                <item link="InicioEditar" value="laguantera.jsp.logueado.inicio.menuSecundario.editar.titulo" 
+                      tooltip="laguantera.jsp.logueado.inicio.menuSecundario.editar.descripcion"
+                />
+                <item link="InicioAyuda" value="laguantera.jsp.logueado.inicio.menuSecundario.ayuda.titulo" 
+                      tooltip="laguantera.jsp.logueado.inicio.menuSecundario.ayuda.descripcion"
+                />-->
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.inicio.ver"  extends="laguantera.logueado.inicio">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.inicio.pagina.ver.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.inicio.pagina.ver.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/inicio/ver.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/inicio/ver.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <!--<definition name="laguantera.logueado.inicio.editar"  extends="laguantera.logueado.inicio">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.inicio.pagina.editar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.inicio.pagina.editar.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/inicio/editar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/inicio/editar.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.inicio.ayuda"  extends="laguantera.logueado.inicio">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.inicio.pagina.ayuda.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.inicio.pagina.ayuda.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/inicio/ayuda.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/inicio/ayuda.css" />
+            </put-list-attribute>
+        </definition>-->
+        
+        <!--Paginas especificas datos usuario-->
+        <definition name="laguantera.logueado.cuentaUsuario"  extends="laguantera.logueado.plantillaBase">
+
+            <put-attribute name="barraDerechaURLImagen"  value="./img/logueado/html/segmentosWeb/cuentaUsuario/carnet.png" />
+            <put-attribute name="barraDerechaURLDescripcion"  value="laguantera.jsp.logueado.cuentaUsuario.barralateral.img.descripcion" />
+            <put-attribute name="barralaterlaDescripcion"  value="laguantera.jsp.logueado.cuentaUsuario.barralateral.descripcion" />
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="Inicio" value="laguantera.jsp.logueado.comun.menu.inicio.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.inicio.descripcion"
+                />
+                <item link="Vehiculos" value="laguantera.jsp.logueado.comun.menu.vehiculos.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.vehiculos.descripcion"
+                />
+                <item link="Operaciones" value="laguantera.jsp.logueado.comun.menu.operaciones.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.operaciones.descripcion"
+                />
+                <item link="Galerias" value="laguantera.jsp.logueado.comun.menu.galerias.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.galerias.descripcion"
+                />
+                <item link="PlanificaTuViaje" value="laguantera.jsp.logueado.comun.menu.planificaTuViaje.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.planificaTuViaje.descripcion"
+                />
+                <item link="CuentaUsuario" value="laguantera.jsp.logueado.comun.menu.cuentaUsuario.titulo" 
+                      tooltip="laguantera.jsp.logueado.comun.menu.cuentaUsuario.descripcion"
+                      icon="Seleccionada"
+                />
+            </put-list-attribute>
+            
+            <put-list-attribute name="menuSecundarioList" cascade="true">
+                <item link="CuentaUsuarioVer" value="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.ver.titulo" 
+                      tooltip="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.ver.descripcion"
+                />
+                <item link="CuentaUsuarioEditar" value="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.editar.titulo" 
+                      tooltip="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.editar.descripcion"
+                />
+                <item link="CuentaUsuarioInvitar" value="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.invitarAmigo.titulo" 
+                      tooltip="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.invitarAmigo.descripcion"
+                />
+                <item link="CuentaUsuarioBorrar" value="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.borrarCuenta.titulo" 
+                      tooltip="laguantera.jsp.logueado.cuentaUsuario.menuSecundario.borrarCuenta.descripcion"
+                />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.cuentaUsuario.ver"  extends="laguantera.logueado.cuentaUsuario">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.cuentaUsuario.pagina.ver.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.cuentaUsuario.pagina.ver.descripcion" />
+                          
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/cuentaUsuario/ver.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/cuentaUsuario/ver.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.cuentaUsuario.editar"  extends="laguantera.logueado.cuentaUsuario">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.cuentaUsuario.pagina.editar.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/cuentaUsuario/editar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/cuentaUsuario/editar.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.cuentaUsuario.borrar"  extends="laguantera.logueado.cuentaUsuario">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.cuentaUsuario.pagina.borrar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.cuentaUsuario.pagina.borrar.descripcion" />
+              
+            <put-attribute name="seccion"  value="/WEB-INF/html/logueado/segmentosWeb/cuentaUsuario/borrar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/cuentaUsuario/borrar.css" />
+            </put-list-attribute>
+        </definition>
+        
+        <definition name="laguantera.logueado.cuentaUsuario.invitar"  extends="laguantera.logueado.cuentaUsuario">
+            <put-attribute name="titulo" value="laguantera.jsp.logueado.cuentaUsuario.pagina.invitar.titulo" />
+            <put-attribute name="descripcion" value="laguantera.jsp.logueado.cuentaUsuario.pagina.invitar.descripcion" />
+              
+            <put-attribute name="seccion" value="/WEB-INF/html/logueado/segmentosWeb/cuentaUsuario/invitar.jspf" />
+            
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/logueado/segmentosWeb/cuentaUsuario/invitar.css" />
+                <add-attribute value="./css/tags/captcha.css"/>
+            </put-list-attribute>
+        </definition>
+            
+</tiles-definitions>

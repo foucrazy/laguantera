@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="laguantera"/>
+  <table-filter match-name="operaciones"/>
+  <table-filter match-name="tipos_coste"/>
+  <table-filter match-name="marcas"/>
+  <table-filter match-name="tipos_multimedia"/>
+  <table-filter match-name="tipos_elemento"/>
+  <table-filter match-name="tipos_operacion"/>
+  <table-filter match-name="ope_ele"/>
+  <table-filter match-name="vehiculos"/>
+  <table-filter match-name="config"/>
+  <table-filter match-name="costes_derivados"/>
+  <table-filter match-name="usuarios"/>
+  <table-filter match-name="galerias"/>
+  <table-filter match-name="modelos"/>
+  <table-filter match-name="tipos_usuario"/>
+  <table-filter match-name="tipos_combustible"/>
+  <table-filter match-name="multimedias"/>
+  <table-filter match-name="elementos"/>
+  <table-filter match-name="eess"/>
+  <table-filter match-name="neumaticos"/>
+  <table-filter match-name="info_vehiculos"/>
+</hibernate-reverse-engineering>

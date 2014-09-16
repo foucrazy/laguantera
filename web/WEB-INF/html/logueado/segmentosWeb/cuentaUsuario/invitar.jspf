@@ -1,0 +1,17 @@
+<%@include file="init.jspf" %>
+
+<form action="<s:url action='CuentaUsuarioInvitarAmigo'/>" method="POST" cssClass="formulario" theme="simple" acceptcharset="UTF-8" validate="true">    
+    <div class="fieldHorizontalDerecha">
+        <label for="email">
+            <s:text name="laguantera.jsp.campoObligatorio.simbolo"/><s:text name="laguantera.jsp.email.texto"/><s:text name="laguantera.jsp.dosPuntos"/>
+        </label>
+        <input type="text" id="email" name="email" />
+    </div>
+    
+    <div class="bottonBlock">
+        <input type="submit" title='<s:text name="laguantera.jsp.boton.invitar" />' value='<s:text name="laguantera.jsp.boton.invitar" />' class="LoginBoton Button Small Blue FloatRigth5" />
+        <div class="Cleaner"></div>
+    </div>
+
+    <div class="clear"></div>
+</form>

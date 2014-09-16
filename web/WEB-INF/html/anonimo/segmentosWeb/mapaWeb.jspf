@@ -1,0 +1,11 @@
+                <%@include file="../init.jspf" %>
+                
+                <div id="mapaWeb" class="Ocultar">
+                    <h1 class="TituloPagina">Mapa Web</h1>
+                    <div class="CuerpoPagina">
+                        <p>
+                            Aquí va el mapa web!
+                        </p>
+                    </div>
+                    <tiles:insertAttribute name="pie" />
+                </div>

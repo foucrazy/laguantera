@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+       
+        <!--Plantilla Base-->
+        <definition name="laguantera.anonimo.plantillaBase"  template="/WEB-INF/html/anonimo/plantillas/plantillaBase.jsp" >   
+            <put-attribute name="menu"  value="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/menu.jspf" />
+            <put-attribute name="cabecera"  value="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/cabecera.jspf" />
+            <put-attribute name="login" value="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/login.jspf" cascade="true"/>
+            
+            <put-list-attribute name="listaCss">
+                <add-attribute value="./css/comun/reset.css" />
+                <add-attribute value="./css/anonimo/plantillas/plantillaBase.css" />
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/cabecera.css"/>
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/login.css"/>
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/menu.css"/>
+            </put-list-attribute>
+
+            <put-list-attribute name="listaJs">
+                <add-attribute value="./js/jquery/core/jquery-1.7.1.js" />
+                <add-attribute value="./js/jquery/core/jquery-ui-1.8.17.js" />
+                
+                <add-attribute value="./js/jquery/pluginsPropios/jquery.slideMenuEffect.js"/>
+            </put-list-attribute>
+        </definition>
+        
+        <!--Segmentos Comunes para la página de aonimo-->
+        <definition name="laguantera.anonimo.comunBase"  template="/WEB-INF/html/comun/segmentoAnonimoMultiple.jspf" />
+        
+        <definition name="laguantera.anonimo.contactar" extends="laguantera.anonimo.comunBase">
+             <put-attribute name="id"  value="contactar" />
+             <put-attribute name="segmentoComun"  value="/WEB-INF/html/comun/segmentosWeb/contactar.jspf" />
+        </definition>
+        
+        <definition name="laguantera.anonimo.politicaPrivacidad" extends="laguantera.anonimo.comunBase">
+             <put-attribute name="id"  value="politicaPrivacidad" />
+             <put-attribute name="segmentoComun"  value="/WEB-INF/html/comun/segmentosWeb/politicaPrivacidad.jspf" />
+        </definition>
+        
+        <definition name="laguantera.anonimo.w3c" extends="laguantera.anonimo.comunBase">
+             <put-attribute name="id"  value="w3c" />
+             <put-attribute name="segmentoComun"  value="/WEB-INF/html/comun/segmentosWeb/w3c.jspf" />
+        </definition>
+        
+        <definition name="laguantera.anonimo.pie" template="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/pie.jspf">
+             <put-list-attribute name="pieList" cascade="true">
+                <item link="#contactar" value="laguantera.jsp.anonimo.plantillaBase.pie.contactar.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.contactar.descripcionEnlace"/>
+                <item link="#politicaPrivacidad" value="laguantera.jsp.anonimo.plantillaBase.pie.politicaPrivacidad.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.politicaPrivacidad.descripcionEnlace"/>
+                <item link="#mapaWeb" value="laguantera.jsp.anonimo.plantillaBase.pie.mapaWeb.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.mapaWeb.descripcionEnlace"/>
+                <item link="#w3c" value="laguantera.jsp.anonimo.plantillaBase.pie.w3c.texto" tooltip="laguantera.jsp.anonimo.plantillaBase.pie.w3c.descripcionEnlace"/>
+            </put-list-attribute>
+        </definition>
+        
+        <!--Plantillas Multiples-->
+        <definition name="laguantera.anonimo.cargaMultiple" extends="laguantera.anonimo.plantillaBase">
+            <put-attribute name="pie" value="laguantera.anonimo.pie" cascade="true"/>
+            
+            <put-attribute name="cuerpo"  value="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/contenidoMultiple.jspf" />
+            
+            <put-attribute name="titulo" value="laguantera.jsp.anonimo.paginaMultiple.titulo" />
+            <put-attribute name="palabrasClave" value="laguantera.jsp.anonimo.paginaMultiple.palabraClave" />
+            <put-attribute name="descripcion" value="laguantera.jsp.anonimo.paginaMultiple.descripcion" />
+            
+            <put-attribute name="calculandoDistancia" cascade="true">
+                <definition extends="laguantera.dialogo">
+                    <put-attribute name="idDialogo"  value="calculandoDistancia" />
+                    <put-attribute name="tituloDialogo"  value="laguantera.jsp.anonimo.menu.planificaTuViaje.calculandoDistancia.titulo" />
+                    <put-attribute name="contenidoDialogo"  value="laguantera.jsp.anonimo.menu.planificaTuViaje.calculandoDistancia.cuerpo" />
+                    <put-attribute name="ejecutandoActiva"  value="true" />
+                </definition>
+            </put-attribute>
+            
+            <put-attribute name="calculandoViaje" cascade="true">
+                <definition extends="laguantera.dialogo">
+                    <put-attribute name="idDialogo"  value="calculandoViaje" />
+                    <put-attribute name="tituloDialogo"  value="laguantera.jsp.anonimo.menu.planificaTuViaje.calculandoViaje.titulo" />
+                    <put-attribute name="contenidoDialogo"  value="laguantera.jsp.anonimo.menu.planificaTuViaje.calculandoViaje.cuerpo" />
+                    <put-attribute name="ejecutandoActiva"  value="true" />
+                </definition>
+            </put-attribute>
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="#queEsLaGuantera" value="laguantera.jsp.anonimo.menu.queEsLaGuantera.texto" tooltip="laguantera.jsp.anonimo.menu.queEsLaGuantera.descripcionEnlace"/>
+                <item link="#planificaTuViaje" value="laguantera.jsp.anonimo.menu.planificaTuViaje.texto" tooltip="laguantera.jsp.anonimo.menu.planificaTuViaje.descripcionEnlace"/>
+                <item link="#galeriaImagenes" value="laguantera.jsp.anonimo.menu.galeriaImagenes.texto" tooltip="laguantera.jsp.anonimo.menu.galeriaImagenes.descripcionEnlace"/>
+                <item link="#gestionGastos" value="laguantera.jsp.anonimo.menu.gestionGastos.texto" tooltip="laguantera.jsp.anonimo.menu.gestionGastos.descripcionEnlace"/>
+                <item link="#notificaciones" value="laguantera.jsp.anonimo.menu.notificaciones.texto" tooltip="laguantera.jsp.anonimo.menu.gestionGastos.descripcionEnlace"/>
+            </put-list-attribute>
+
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/jquery/pluginsExternos/fancybox/jquery.fancybox.css" />
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/contenidoMultiple.css" />
+                
+                <add-attribute value="./css/anonimo/segmentosCss/queEsLaGuantera.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/planificaTuViaje.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/galeriaImagenes.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/gestionGastos.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/notificaciones.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/registrarse.css"/>
+                <add-attribute value="./css/anonimo/segmentosCss/recuperarContrasena.css"/>
+                
+                <add-attribute value="./css/comun/segmentosCss/contactar.css"/>
+                <add-attribute value="./css/comun/segmentosCss/mapaWeb.css"/>
+                <add-attribute value="./css/comun/segmentosCss/politicaPrivacidad.css"/>
+                <add-attribute value="./css/comun/segmentosCss/w3c.css"/>
+                
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/pie.css"/>
+                <add-attribute value="./css/tags/captcha.css"/>
+                
+                <add-attribute value="./css/jquery/core/jquery-ui-1.8.16.custom.css" />
+            </put-list-attribute>
+            
+            <put-list-attribute name="listaContenidos" cascade="true">
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/queEsLaGuantera.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/planificaTuViaje.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/galeriaImagenes.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/gestionGastos.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/notificaciones.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/registrarse.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/recuperarContrasena.jspf" />
+                <add-attribute value="/WEB-INF/html/anonimo/segmentosWeb/mapaWeb.jspf" />
+                
+                <add-attribute value="laguantera.anonimo.contactar" />
+                <add-attribute value="laguantera.anonimo.politicaPrivacidad" />
+                <add-attribute value="laguantera.anonimo.w3c" />
+            </put-list-attribute>
+
+            <put-list-attribute name="listaJs" inherit="true">
+                <add-attribute value="http://maps.google.com/maps/api/js?sensor=true" />
+                
+                <add-attribute value="./js/jquery/pluginsExternos/jquery.backgroundPosition.js"/>
+                
+                <add-attribute value="./js/jquery/pluginsExternos/jquery.validate.js"  />
+		<add-attribute value="./js/jquery/pluginsExternos/jquery.form.wizard.js" />
+                <add-attribute value="./js/jquery/pluginsExternos/jquery.fancybox.js" />
+                
+                <add-attribute value="./js/jquery/pluginsPropios/jquery.backGroundAnimation.js"/>
+                <add-attribute value="./js/tags/captcha.js" />
+                <add-attribute value="./js/anonimo/plantillas/segmentosPlantilla/plantillaMultiple.js" />
+                <add-attribute value="./js/tags/captcha.js" />
+                
+            </put-list-attribute>
+        </definition>
+        
+        <!--Plantilla Simple-->
+        <definition name="laguantera.anonimo.contenidoSimple" extends="laguantera.anonimo.plantillaBase">
+            <put-attribute name="cuerpo"  value="/WEB-INF/html/anonimo/plantillas/segmentosPlantilla/contenidoSimple.jspf" />
+            
+            <put-list-attribute name="menuList" cascade="true">
+                <item link="/laguantera/InicioTodo#queEsLaGuantera" value="laguantera.jsp.anonimo.menu.queEsLaGuantera.texto" tooltip="laguantera.jsp.anonimo.menu.queEsLaGuantera.descripcionEnlace"/>
+                <item link="/laguantera/InicioTodo#planificaTuViaje" value="laguantera.jsp.anonimo.menu.planificaTuViaje.texto" tooltip="laguantera.jsp.anonimo.menu.planificaTuViaje.descripcionEnlace"/>
+                <item link="/laguantera/InicioTodo#galeriaImagenes" value="laguantera.jsp.anonimo.menu.galeriaImagenes.texto" tooltip="laguantera.jsp.anonimo.menu.galeriaImagenes.descripcionEnlace"/>
+                <item link="/laguantera/InicioTodo#gestionGastos" value="laguantera.jsp.anonimo.menu.gestionGastos.texto" tooltip="laguantera.jsp.anonimo.menu.gestionGastos.descripcionEnlace"/>
+                <item link="/laguantera/InicioTodo#notificaciones" value="laguantera.jsp.anonimo.menu.notificaciones.texto" tooltip="laguantera.jsp.anonimo.menu.gestionGastos.descripcionEnlace"/>
+            </put-list-attribute>
+
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/contenidoSimple.css" />
+                <add-attribute value="./css/anonimo/plantillas/segmentosPlantilla/pie.css"/>
+            </put-list-attribute>
+            
+            <put-list-attribute name="listaJs" inherit="true">                
+                <add-attribute value="./js/anonimo/plantillas/segmentosPlantilla/plantillaSimple.js" />
+            </put-list-attribute>
+       </definition>
+        
+       <definition name="laguantera.anonimo.planificaTuViajeResultado" extends="laguantera.anonimo.contenidoSimple">           
+            <put-attribute name="contenido" value="/WEB-INF/html/anonimo/segmentosWeb/planificaTuViajeResultado.jspf" cascade="true"/>
+            
+            <put-attribute name="titulo" value="laguantera.jsp.anonimo.paginaSimple.planificaTuViajeResultado.titulo" />
+            <put-attribute name="palabrasClave" value="laguantera.jsp.anonimo.paginaSimple.planificaTuViajeResultado.palabraClave" />
+            <put-attribute name="descripcion" value="laguantera.jsp.anonimo.paginaSimple.planificaTuViajeResultado.descripcion" />
+            
+            <put-attribute name="envioCorreo" cascade="true">
+                <definition extends="laguantera.dialogoInput">
+                    <put-attribute name="idDialogo"  value="envioCorreo" />
+                    <put-attribute name="tituloDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.enviandoCorreo.titulo" />
+                    <put-attribute name="mensajeDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.enviandoCorreo.mensaje" />
+                    <put-attribute name="textoInput"  value="laguantera.jsp.email.texto" />
+                    <put-attribute name="operacionEjecutandoseMensaje"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.enviandoCorreo.operacionEjecutandoseMensaje" />
+                </definition>
+            </put-attribute>
+            
+            <put-attribute name="operacionCorrecta" cascade="true">
+                <definition extends="laguantera.dialogo">
+                    <put-attribute name="idDialogo"  value="operacionCorrecta" />
+                    <put-attribute name="tituloDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.operacionCorrecta.titulo" />
+                    <put-attribute name="contenidoDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.operacionCorrecta.cuerpo" />
+                    <put-attribute name="ejecutandoActiva"  value="false" />
+                </definition>
+            </put-attribute>
+            
+            <put-attribute name="operacionErronea" cascade="true">
+                <definition extends="laguantera.dialogo">
+                    <put-attribute name="idDialogo"  value="operacionErronea" />
+                    <put-attribute name="tituloDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.operacionErronea.titulo" />
+                    <put-attribute name="contenidoDialogo"  value="laguantera.jsp.anonimo.planificaTuViajeResultado.operacionErronea.cuerpo" />
+                    <put-attribute name="ejecutandoActiva"  value="false" />
+                </definition>
+            </put-attribute>
+
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/anonimo/segmentosCss/planificaTuViaje.css" />
+                <add-attribute value="./css/anonimo/segmentosCss/planificaTuViajeResultado.css" />
+                
+                <add-attribute value="./css/jquery/core/jquery-ui-1.8.16.custom.css" />
+            </put-list-attribute>
+
+            <put-list-attribute name="listaJs" inherit="true">
+                <add-attribute value="http://maps.google.com/maps/api/js?sensor=true" />
+                
+                <add-attribute value="./js/anonimo/segmentosJs/planificaTuViajeResultado.js" />
+            </put-list-attribute>
+       </definition>
+       
+       <definition name="laguantera.anonimo.correcto" extends="laguantera.anonimo.contenidoSimple">           
+            <put-attribute name="contenido" value="/WEB-INF/html/comun/segmentosWeb/correcto.jspf" cascade="true"/>
+            <put-attribute name="pie" value="laguantera.anonimo.pie" cascade="true"/>
+            
+            <put-attribute name="titulo" value="laguantera.jsp.anonimo.paginaSimple.correto.titulo" />
+            <put-attribute name="palabrasClave" value="laguantera.jsp.anonimo.paginaSimple.correto.palabraClave" />
+            <put-attribute name="descripcion" value="laguantera.jsp.anonimo.paginaSimple.correto.descripcion" />
+
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/comun/segmentosCss/correcto.css" />
+            </put-list-attribute>
+       </definition>
+       
+       <definition name="laguantera.anonimo.error" extends="laguantera.anonimo.contenidoSimple">           
+            <put-attribute name="contenido" value="/WEB-INF/html/comun/segmentosWeb/error.jspf" cascade="true"/>
+            <put-attribute name="pie" value="laguantera.anonimo.pie" cascade="true"/>
+            
+            <put-attribute name="titulo" value="laguantera.jsp.anonimo.paginaSimple.error.titulo" />
+            <put-attribute name="palabrasClave" value="laguantera.jsp.anonimo.paginaSimple.error.palabraClave" />
+            <put-attribute name="descripcion" value="laguantera.jsp.anonimo.paginaSimple.error.descripcion" />
+
+            <put-list-attribute name="listaCss" inherit="true">
+                <add-attribute value="./css/comun/segmentosCss/error.css" />
+            </put-list-attribute>
+       </definition>
+       
+</tiles-definitions>

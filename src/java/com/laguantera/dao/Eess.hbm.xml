@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-mar-2011 22:55:53 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.Eess" table="eess">
+    <id name="idEess" type="java.lang.Integer">
+      <column name="idEESS"/>
+      <generator class="identity"/>
+    </id>
+    <property name="provincia" type="string">
+      <column length="50" name="provincia"/>
+    </property>
+    <property name="localidad" type="string">
+      <column length="50" name="localidad"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="200" name="direccion"/>
+    </property>
+    <property name="rotulo" type="string">
+      <column length="100" name="rotulo"/>
+    </property>
+    <property name="horario" type="string">
+      <column length="125" name="horario"/>
+    </property>
+    <property name="latitud" type="java.lang.Double">
+      <column name="latitud" precision="22" scale="0"/>
+    </property>
+    <property name="longitud" type="java.lang.Double">
+      <column name="longitud" precision="22" scale="0"/>
+    </property>
+    <property name="precio95" type="java.lang.Double">
+      <column name="precio95" precision="22" scale="0"/>
+    </property>
+    <property name="precio98" type="java.lang.Double">
+      <column name="precio98" precision="22" scale="0"/>
+    </property>
+    <property name="precioA" type="java.lang.Double">
+      <column name="precioA" precision="22" scale="0"/>
+    </property>
+    <property name="precioAextra" type="java.lang.Double">
+      <column name="precioAExtra" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

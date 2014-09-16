@@ -1,0 +1,84 @@
+<div id="sidebar">
+    <% 
+        Integer idUsuario = (Integer)session.getAttribute("idUsuario"); 
+        if (idUsuario!=null && !idUsuario.equals(""))
+    {%>
+        <ul class="tree">
+            <li>
+                <a href="#">Contenido</a>
+                <ul>
+                    <li>
+                        <span class="seccion">Usuarios</span>
+                        <ul>
+                            <li><a href="#" onclick="mostrarBarra()">Alta</a></li>
+                            <li><a href="AdminGetUsuarios" onclick="mostrarBarra()">Listado</a></li>                        
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="seccion">Vehiculos</span>
+                        <ul>
+                            <li><a href="AdminGetVehiculos" onclick="mostrarBarra()">Listado</a></li>
+                            <li><a href="AdminGetMarcas" onclick="mostrarBarra()">Marcas</a></li>
+                            <li><a href="AdminGetModelos" onclick="mostrarBarra()">Modelos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="seccion">Tipos Combustibles</span>
+                        <ul>
+                            <li><a href="#" onclick="mostrarBarra()">A&ntilde;adir</a></li>
+                            <li><a href="AdminGetCombustibles" onclick="mostrarBarra()">Listado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="seccion">Tipos Operaci&oacute;n</span>
+                        <ul>
+                            <li><a href="#" onclick="mostrarBarra()">A&ntilde;adir</a></li>
+                            <li><a href="AdminGetOperaciones" onclick="mostrarBarra()">Listado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="seccion">Tipos Elemento</span>
+                        <ul>
+                            <li><a href="#" onclick="mostrarBarra()">A&ntilde;adir</a></li>
+                            <li><a href="AdminGetElementos" onclick="mostrarBarra()">Listado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="seccion">Tipos Coste</span>
+                        <ul>
+                            <li><a href="#" onclick="mostrarBarra()">A&ntilde;adir</a></li>
+                            <li><a href="AdminGetCostes" onclick="mostrarBarra()">Listado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portal</a>
+                        <ul>
+                            <li><a href="AdminGetConfig" onclick="mostrarBarra()">Configuraci&oacute;n</a></li>
+                            <li><a href="ftp://ftp.laguantera.com" onclick="mostrarBarra()">FTP</a></li>
+                            <li><a href="AdminLoadSqlPage" onclick="mostrarBarra()">Consultas SQL</a></li>
+                            <li><a href="AdminGetInfoSistema" onclick="mostrarBarra()">Sistema</a></li>
+                            <li><a href="AdminGetLog" onclick="mostrarBarra()">Log</a></li>
+                            <li><a href="AdminUpdateEESS" onclick="mostrarBarra()">UpdateEESS</a></li>
+                            <li><a href="AdminCargarNeumaticosOponeo" onclick="mostrarBarra()">Cargar Neumaticos</a></li>
+                            <li><a href="AdminCargarMarcasModelosXML" onclick="mostrarBarra()">Cargar Vehiculos XML</a></li>
+                            <li><a href="AdminCargarVehiculosIDAE" onclick="mostrarBarra()">Cargar Vehiculos IDAE</a></li>
+                        </ul>
+            </li>
+            <li>
+                <a href="LogoutRealizar" onclick="mostrarBarra()">Salir</a>
+            </li>
+        </ul>
+    <%}%>
+</div>

@@ -1,0 +1,384 @@
+/*Estilos para resetear las css*/
+html,body{
+    height:100%;
+}
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body{
+    line-height: 1;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+blockquote, q{
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,q:before, q:after{
+    content: '';
+    content: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a, a:link, a:visited, a:hover, a:active{
+    text-decoration:none;
+}
+
+/*Estilos Generales*/
+.Cleaner {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    font-size: 0px;
+    margin:0;
+    padding:0;
+}
+
+.CleanerH5 {
+    clear: both;
+    width:100%;
+    height: 5px;
+    margin:0;
+    padding:0;
+}
+
+.CleanerH10 {
+    clear: both;
+    width:100%;
+    height: 10px;
+    margin:0;
+    padding:0;
+}
+
+.Ocultar{
+    display:none;
+}
+
+.Error{
+    color: red;
+}
+
+.Centrar{
+    margin: 0 auto;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+
+/*Estilos de la primera version de la calculadora*/
+body{
+    background-color : #666D75;
+    background-image : url('../img/carretera2.png');
+    background-position : top left;
+    background-repeat : no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 1.5em;
+    background-repeat: repeat;
+    color: white;
+}
+
+#cabecera{
+    height:175px;
+    width:1000px;
+    margin:0 auto;
+}
+
+#contenido{	
+    width:1000px;
+    margin:0 auto;
+    margin-bottom:70px;
+    font-family: Georgia;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+#info{
+    background:#F2A81D;
+    height:30px;
+    margin:0 auto;
+    width:250px;
+    padding:7px;
+    font-size:11px;
+}
+
+#buscador{
+    background:#F2A81D;    
+    width:500px;
+    margin:0 auto;
+    margin-bottom:20px;
+    border:4px solid #A2880D;
+    border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+}
+
+/*Estilos planifica tu viaje*/
+#buscadorPlanificaTuViaje{
+    width: 530px;
+    margin:10px auto;
+}
+
+.Buscador{
+    background:#F2A81D;
+    border:4px solid #A2880D;
+    border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+}
+
+.Pasos{
+    border: 1px solid white;
+    margin:10px;
+    padding:5px;
+}
+
+.Pasos ul{
+    background:none repeat scroll 0 0 transparent;
+    border:0 solid #CCCCCC;
+    clear:both;
+    display:block;
+    float:left;
+    list-style:none outside none;
+    margin:10px 0;
+    padding:0;
+    position:relative;
+}
+
+.Pasos ul li{
+    border:0 solid #E0E0E0;
+    display:block;
+    float:left;
+    margin:0;
+    padding:0 3px;
+    position:relative;
+}
+
+.Pasos ul li div.PasoSeleccionado{
+    background:none repeat scroll 0 0 #EA8511;
+    border:1px solid #EA8511;
+    box-shadow:5px 5px 8px #888888;
+    color:#F8F8F8;
+    cursor:text;
+}
+
+.NumeroPaso{
+    float:left;
+    font:bold 45px Verdana,Arial,Helvetica,sans-serif;
+    position:relative;
+    text-align:center;
+    padding:0 1px 5px;
+}
+
+.DescripcionPaso{
+    display:block;
+    float:left;
+    font:bold 20px Verdana,Arial,Helvetica,sans-serif;
+    padding:5px;
+    position:relative;
+    text-align:left;
+}
+
+.DescripcionPaso span{
+    font:12px Verdana,Arial,Helvetica,sans-serif;
+}
+
+.Pasos ul li div.PasoDeshabilatado{
+    background:none repeat scroll 0 0 #F8F8F8;
+    border:1px solid #CCCCCC;
+    color:#CCCCCC;
+    cursor:text;
+}
+
+.Pasos ul li div.PasoDeshabilatado .NumeroPaso, .Pasos ul li div.PasoDeshabilatado .DescripcionPaso{
+    color:#CCCCCC;
+}
+
+.VerMasOpciones{
+    color:#CCCCCC;
+    font-size:12px;
+    height:20px;
+}
+
+.DesconoceDatos{
+    font-size:13px;
+    height:40px;
+}
+
+.Navegacion{
+    float:right;
+    margin-right:10px;
+}
+
+#consumoEstandar, #desconoceDatos{
+    display:none;
+}
+
+/*Estilos Generales para los formularios*/
+form{
+	margin: 5px auto;
+}
+
+form fieldset, fieldset{
+	border:2px solid;
+	margin:10px;
+	padding:5px;	
+}
+
+form fieldset legend, fieldset legend{
+	margin-left:5px;
+	margin-top:-3px;
+}
+
+.fieldHorizontalDerecha{
+    clear:both;
+    display:block;
+    float:left;
+    margin:5px;
+}
+
+.fieldHorizontalDerecha label{
+    display:block;
+    float:left;
+    text-align:right;
+    width:105px;
+}
+
+.fieldHorizontalDerecha label.error{
+    color:red;
+    display:inline-block;
+    margin-left:5px;
+    text-align:left;
+    width:120px;
+}
+
+.fieldHorizontalDerecha input, .fieldHorizontalDerecha select{
+    float:left;
+    margin-left:5px;
+    text-align:left;
+    width:175px;
+}
+
+input[type="checkbox"]{
+    width: 14px;
+}
+
+input:focus{
+     border:solid 2px #73A6FF;  
+     background:#EFF5FF;  
+     color:#000;  
+}
+
+.PlanificaTuViajeResultado{
+  width: 920px;  
+}
+
+#buscadorPlanificaTuViajeResultado{
+    margin: 5px;
+    float: left;
+    width: 30%;
+}
+
+.Datos {
+    background:url("/laguantera/img/anonimo/css/segmentosCss/planificaTuViaje/papel.png") no-repeat scroll left top transparent;
+    font-family:'Courier New',Courier,monospace;
+    font-size:12px;
+    margin-left: 5px;
+    padding:150px 30px 30px;
+    width:350px;
+    color:black;
+    float: left;
+}
+
+.Datos .Fecha {
+    border-bottom:1px solid black;
+    font-size:18px;
+}
+
+.Datos .Resultado {
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+.Resultado{
+    font-weight:bold;
+}
+
+.Opciones {
+    background:none repeat scroll 0 0 #F2A81D;
+    border-bottom:4px solid orange;
+    border-radius:7px 7px 7px 7px;
+    height:75px;
+    margin-left:25px;
+    padding:10px;
+    text-align:center;
+    width:200px;
+}
+
+.Descarga{
+    width: 10%;
+    float: left;
+    margin: 5px;
+}
+
+#mapaGoogle{
+    height:300px;
+}
+
+.ResultadosGoogle{
+    background:none repeat scroll 0 0 #A5BFDD;
+    border:4px solid #22789F;
+    border-radius:7px 7px 7px 7px;
+    color: black;
+    margin-top: 5px;
+}
+
+.ResultadosGoogleIda, .ResultadosGoogleVuelta{
+    width: 48%;
+    margin-top: 5px;
+    border:4px solid #22789F;
+    border-radius:7px 7px 7px 7px;
+    margin-top: 5px;
+}
+
+.ResultadosGoogleIda{
+    float: left;
+    color: black;
+    background:none repeat scroll 0 0 #A5BFDD;
+}
+
+.ResultadosGoogleVuelta{
+    float: right;
+    color: white;
+    background:none repeat scroll 0 0 red;
+}

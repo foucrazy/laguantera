@@ -1,0 +1,36 @@
+/* Cabecera */
+.Cabecera {
+	background-color:black;
+	float:left;
+	width:100%;
+}
+
+.TituloCabecera {
+	float: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 0px;
+}
+
+.TituloCabecera img{
+	height: 95px;
+        width: 660px;
+}
+
+.TituloCabecera a {
+	margin: 0px;
+	padding: 0px;
+	font-size: 50px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.TituloCabecera a span {
+	color: #c8c8c3;
+}
+
+.TituloCabecera a .tagline {
+	font-size: 12px;
+	color: #fff;
+	font-weight: normal;
+	margin-left: 20px;
+}

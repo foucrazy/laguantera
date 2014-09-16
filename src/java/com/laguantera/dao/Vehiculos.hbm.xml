@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-dic-2010 23:39:28 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="laguantera" name="com.laguantera.dao.Vehiculos" table="vehiculos">
+    <id name="idVehiculo" type="java.lang.Integer">
+      <column name="idVehiculo"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.laguantera.dao.TiposCombustible" fetch="select" name="tiposCombustible">
+      <column name="idTipoCombustible" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.laguantera.dao.Modelos" fetch="select" name="modelos">
+      <column name="idModelo" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.laguantera.dao.Usuarios" fetch="select" name="usuarios">
+      <column name="idUsuario" not-null="true"/>
+    </many-to-one>
+    <property name="motor" type="string">
+      <column length="100" name="motor" not-null="true"/>
+    </property>
+    <property name="tara" type="java.lang.Integer">
+      <column name="tara"/>
+    </property>
+    <property name="neumaticos" type="string">
+      <column length="20" name="neumaticos"/>
+    </property>
+    <property name="asientos" type="java.lang.Integer">
+      <column name="asientos"/>
+    </property>
+    <property name="cilindros" type="java.lang.Integer">
+      <column name="cilindros"/>
+    </property>
+    <property name="cilindrada" type="java.lang.Integer">
+      <column name="cilindrada"/>
+    </property>
+    <property name="cv" type="float">
+      <column name="cv" not-null="true" precision="12" scale="0"/>
+    </property>
+    <property name="kw" type="java.lang.Float">
+      <column name="kw" precision="12" scale="0"/>
+    </property>
+    <property name="matricula" type="string">
+      <column length="7" name="matricula" unique="true"/>
+    </property>
+    <property name="fechaMatriculacion" type="date">
+      <column length="10" name="fechaMatriculacion"/>
+    </property>
+    <property name="fechaFabricacion" type="date">
+      <column length="10" name="fechaFabricacion"/>
+    </property>
+    <property name="imagen" type="string">
+      <column length="100" name="imagen"/>
+    </property>
+    <set inverse="true" name="galeriases">
+      <key>
+        <column name="idVehiculo" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Galerias"/>
+    </set>
+    <set inverse="true" name="costesDerivadoses">
+      <key>
+        <column name="idVehiculo" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.CostesDerivados"/>
+    </set>
+    <set inverse="true" name="operacioneses">
+      <key>
+        <column name="idVehiculo" not-null="true"/>
+      </key>
+      <one-to-many class="com.laguantera.dao.Operaciones"/>
+    </set>
+  </class>
+</hibernate-mapping>

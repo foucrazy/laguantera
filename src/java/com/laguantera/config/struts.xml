@@ -1,0 +1,74 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="laguantera-default" extends="struts-default">
+        <!--Radirección para cuando no se encuentra el recurso pedido-->
+        <result-types>
+            <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+
+        <global-results>
+            <result name="noAutorizado">/test/noAutorizado.jsp</result>
+            <result name="logIn">/test/index.jsp</result>
+            <result name="error">/test/error.jsp</result>
+            <result name="ok">/test/ok.jsp</result>
+        </global-results>
+
+        <!-- CONTROL DE IDIOMAS -->
+        <action name="cambiarIdioma" class="com.laguantera.util.CambiarIdioma">
+            <result name="error">error.jsp</result>
+            <result name="redirect" type="redirect">${url}</result>
+            <result>/index.jsp</result>
+        </action>
+    </package>
+
+<!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="usuariosRegistrados" extends="laguantera-default">
+
+        <interceptors>
+            <!--http://struts.apache.org/2.x/docs/interceptors.html-->
+            <interceptor name="SessionInterceptor" class="com.laguantera.util.InterceptorSesion"/>
+
+            <!--Interceptores por defecto mas el nuestro-->
+            <interceptor-stack name="controlAcceso">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="SessionInterceptor"/>
+            </interceptor-stack>
+            
+            <interceptor-stack name="controlAccesoRetrieveMessage">
+                <interceptor-ref name="controlAcceso" />
+                <interceptor-ref name="store">
+                    <param name="operationMode">RETRIEVE</param>
+                </interceptor-ref>
+            </interceptor-stack>
+            
+            <interceptor-stack name="controlAccesoStoreMessage">
+                <interceptor-ref name="controlAcceso" />
+                <interceptor-ref name="store">
+                    <param name="operationMode">STORE</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="controlAcceso" />
+
+        <global-results>
+            <result name="noAutorizado">/comunes/noAutorizado.jsp</result>
+            <result name="logIn">/index.jsp</result>
+            <result name="error" type="tiles">laguantera.usuario.error</result>
+        </global-results>       
+
+    </package>
+
+    <include file="com/laguantera/action/usuario/usuarioStruts.xml"/>
+    <include file="com/laguantera/action/admin/administradorStruts.xml"/>
+    <include file="com/laguantera/action/calculadora/calculadoraStruts.xml"/>
+    <include file="com/laguantera/action/vehiculo/vehiculoStruts.xml"/>
+    <include file="com/laguantera/action/galerias/galeriasStruts.xml"/>    
+    <include file="com/laguantera/action/comunes/comunesStruts.xml"/>
+</struts>
+

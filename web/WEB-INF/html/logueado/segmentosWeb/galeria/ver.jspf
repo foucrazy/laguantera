@@ -1,0 +1,48 @@
+<%@include file="init.jspf" %>
+
+<div class="cabeceraGaleria">
+    <div class="galeriaInfo">
+        <h1>${galeria.titulo}</h1>
+        <h2><s:text name="laguantera.jsp.logueado.galeria.vehiculoAsociado"/>&nbsp;${galeria.matricula}</h2>
+    </div>
+
+    <div class="galeriaOpciones">
+        <c:url var="anadirMultimedia" value="MultimediaAnadir">
+            <c:param name="idGaleria" value='${galeria.idGaleria}'/>
+        </c:url> 
+        <a href="${anadirMultimedia}"><s:text name="com.laguantera.action.galerias.AddMultimedia.titulo" /></a>        
+        
+        <c:url var="editarGaleria" value="GaleriaEditar">
+            <c:param name="idGaleria" value='${galeria.idGaleria}'/>
+        </c:url>                    
+        <a href="${editarGaleria}"><s:text name="laguantera.jsp.logueado.galeria.pagina.editar.descripcion" /></a>
+        
+        <c:url var="borrarGaleria" value="GaleriaBorrar">
+            <c:param name="idGaleria" value='${galeria.idGaleria}'/>
+        </c:url> 
+        <a href="${borrarGaleria}"><s:text name="laguantera.jsp.logueado.galeria.pagina.borrar.descripcion" /></a>        
+    </div>
+</div>
+
+<div class="multimediaListado">
+    <c:choose>
+        <c:when test="${not empty galeria.multimedias}" >
+            <c:forEach items="${galeria.multimedias}" var="multimedia" varStatus="contador">
+                <div class="multimedia">
+                    <c:url var="verMultimedia" value="MultimediaVer">
+                        <c:param name="idGaleria" value='${multimedia.idMultimedia}'/>
+                    </c:url>  
+                    <a href="${verMultimedia}">
+                        <img src="/lag-recursos/imagenes/tb_${multimedia.ruta}" alt="${multimedia.titulo}" title="${multimedia.titulo}"/>                
+                    </a>
+                </div>
+            </c:forEach>    
+        </c:when>
+        <c:otherwise>
+            <p>
+                <s:text name="laguantera.jsp.logueado.multimedia.empty"/>.&nbsp;
+                <a href="${anadirMultimedia}"><s:text name="com.laguantera.action.galerias.AddMultimedia.titulo" /></a>
+            </p>
+        </c:otherwise>
+    </c:choose>    
+</div>

@@ -1,0 +1,35 @@
+/**************************************************************************************************
+ *			 			       				Estilos para Pie      	                        	   *
+ ***************************************************************************************************/
+ /*Estilos para el pie de pagina*/
+.Pie{
+	background: #151F2B;
+	border:2px solid #202F42;
+	padding: 10px;
+	margin-top: 10px;
+	-ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 97.5%;
+	height: 3%;
+}
+
+.Pie ul{
+	list-style-type: none;
+	margin: 0 auto;
+	width: 310px;
+}
+
+.Pie ul li{
+	display: inline;
+}
+
+.Pie ul li a{
+	text-decoration: none;
+	color: white;
+}

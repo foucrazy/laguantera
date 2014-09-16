@@ -1,0 +1,16 @@
+<div id="header">
+    <div id="title">
+        <img id="imgLogo" src="/laguantera/img/admin/logo.png" alt="La Guantera" />
+    </div>
+</div>
+
+<div id="navbar">
+    <ul>
+        <li class="right">
+                <a href="#">Ayuda</a>
+        </li>
+        <li class="right">
+                <img src="/laguantera/img/admin/cargando2.gif" alt="Enviando peticion..." id="loading" />
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory name="SessionFactoryLaGuantera">
+    <property name="hibernate.connection.datasource">java:comp/env/jdbc/laguantera</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.show_sql">false</property>
+    <mapping resource="com/laguantera/dao/CostesDerivados.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Multimedias.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Operaciones.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Modelos.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Usuarios.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Elementos.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposCoste.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Galerias.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Vehiculos.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposElemento.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposUsuario.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposOperacion.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposMultimedia.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/TiposCombustible.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/OpeEle.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Marcas.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Config.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Eess.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Neumaticos.hbm.xml"/>
+    <mapping resource="com/laguantera/dao/Info_Vehiculos.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

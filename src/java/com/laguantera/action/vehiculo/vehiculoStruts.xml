@@ -1,0 +1,106 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="vehiculoLibre" extends="laguantera-default">
+    </package>
+
+<!-- ACCIONES QUE REQUIEREN DE USUARIO -->
+    <package name="vehiculo" extends="usuariosRegistrados">
+        
+        <!--Pagina Inicio-->
+        <action name="Vehiculos">
+            <result type="redirectAction">VehiculoListado</result>
+        </action>
+        
+        <action name="VehiculoListado" class="com.laguantera.action.vehiculo.GetVehiculos">
+            <result name="ok" type="tiles">laguantera.logueado.vehiculo.listado</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+        
+        <action name="VehiculoVer" class="com.laguantera.action.vehiculo.GetVehiculo">
+            <result name="ok" type="tiles">laguantera.logueado.vehiculo.ver</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+        
+        <action name="VehiculoAnadir" class="com.laguantera.action.vehiculo.NuevoVehiculo">
+            <interceptor-ref name="controlAcceso" />
+            <interceptor-ref name="store">
+                <param name="operationMode">RETRIEVE</param>
+            </interceptor-ref>
+            <result name="ok" type="tiles">laguantera.logueado.vehiculo.anadir</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+        
+        <action name="VehiculoEditar" class="com.laguantera.action.vehiculo.GetVehiculo">
+            <result name="ok" type="tiles">laguantera.logueado.vehiculo.editar</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+        
+        <action name="VehiculoBorrar">
+            <result type="tiles">
+                <param name="location">laguantera.logueado.vehiculo.borrar</param>
+                <param name="parse">true</param>
+                <param name="encode">true</param>
+                <param name="idVehiculo">${idVehiculo}</param>
+                <param name="matricula">${matricula}</param>
+            </result>
+        </action>
+      
+        <action name="GetModelos" class="com.laguantera.action.vehiculo.GetModelos">
+            <result name="ok">/WEB-INF/html/jsp/segmentosWeb/vehiculos/getModelos.jsp</result>
+            <result name="error">/WEB-INF/html/jsp/segmentosWeb/vehiculos/getModelos.jsp</result>
+        </action>
+
+<!--        <action name="AnadirVehiculoRealizar" class="com.laguantera.action.vehiculo.AddVehiculo">
+            <interceptor-ref name="controlAcceso" />
+            <interceptor-ref name="store">
+                <param name="operationMode">STORE</param>
+            </interceptor-ref>
+
+            <result name="input" type="redirect">VistaAgnadirVehiculo.action</result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+
+        <action name="EditarVehiculoRealizar" class="com.laguantera.action.vehiculo.UpdVehiculo">
+            <interceptor-ref name="controlAcceso" />
+            <interceptor-ref name="store">
+                <param name="operationMode">STORE</param>
+            </interceptor-ref>
+             <result name="input" type="redirect">
+                <param name="location">VistaEditarVehiculo.action</param>
+                <param name="parse">true</param>
+                <param name="encode">true</param>
+                <param name="idVehiculo">${idVehiculo}</param>
+            </result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+
+        <action name="VistaBorrarVehiculoJsp">
+            <result>
+                <param name="location">/WEB-INF/html/jsp/segmentosWeb/vehiculos/borrar.jsp</param>
+                <param name="parse">true</param>
+                <param name="encode">true</param>
+                <param name="idVehiculo">${idVehiculo}</param>
+                <param name="matricula">${matricula}</param>
+            </result>
+        </action>
+
+        <action name="BorrarVehiculoRealizar" class="com.laguantera.action.vehiculo.DelVehiculo">
+            <result name="input" type="tiles">
+                <param name="location">laguantera.usuario.gestionVehiculos.borrarVehiculo</param>
+                <param name="parse">true</param>
+                <param name="encode">true</param>
+                <param name="idVehiculo">${idVehiculo}</param>
+            </result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+        </action>
+-->        
+    </package>
+</struts>

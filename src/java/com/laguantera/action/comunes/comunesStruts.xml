@@ -1,0 +1,16 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- ACCIONES DE USO ABIERTO E INDISCRIMIADO -->
+    <package name="comunesLibre" extends="laguantera-default">
+        <action name="Contactar" class="com.laguantera.action.comunes.Contactar">
+            <result name="input" type="tiles">laguantera.anonimo.error</result>
+            <result name="error" type="tiles">laguantera.anonimo.error</result>
+            <result name="ok" type="tiles">laguantera.anonimo.correcto</result>
+        </action>             
+    </package>
+
+</struts>

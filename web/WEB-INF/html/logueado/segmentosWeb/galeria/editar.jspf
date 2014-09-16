@@ -1,0 +1,18 @@
+<%@include file="init.jspf" %>
+
+<s:actionmessage/>
+<s:actionerror />
+
+<div class="cabeceraEditarGaleria">
+    <s:text name="laguantera.jsp.logueado.galeria.pagina.editar.explicacion" />
+</div>
+
+<div class="formularioEditarGaleria">
+    <p><s:text name="laguantera.jsp.logueado.galeria.editar.tituloActual" />: <span class="resaltar">${galeria.titulo}</span></p>
+    
+    <s:form acceptcharset="UTF-8" action="editGaleria" method="POST">    
+        <input type="hidden" name="idGaleria" id="idGaleria" value="${galeria.idGaleria}" />
+        <s:textfield label="%{getText('laguantera.jsp.logueado.galeria.anadir.titulo')}" id="titulo" name="titulo" required="true" />
+        <s:submit type="button" cssClass="boton" label="%{getText('laguantera.jsp.logueado.galeria.editar.subir')}"/>
+    </s:form>
+</div>
